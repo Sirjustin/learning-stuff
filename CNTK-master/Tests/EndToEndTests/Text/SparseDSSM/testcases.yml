@@ -1,0 +1,36 @@
+dataDir: ./
+tags:
+     - bvt-p (build_sku == '1bitsgd') and ((flavor == 'release') if (os == 'windows') else ((flavor == 'debug') ^ (device == 'cpu')))
+     - nightly-p (build_sku == '1bitsgd') and ((os == 'linux') or (device == 'gpu') or (flavor == 'release'))
+     - weekly-p (build_sku == '1bitsgd') and ((os == 'linux') or (device == 'gpu') or (flavor == 'release'))
+
+testCases:
+  Must train epochs in exactly same order and parameters:
+    patterns:
+      - ^MPI Rank {{integer}}
+      - Starting Epoch {{integer}}
+      - learning rate per sample = {{float}}
+      - momentum = {{float}}
+
+  Training must finish as expected:
+    patterns:
+      - ^MPI Rank {{integer}}
+      - Finished Epoch[{{integer}} of {{integer}}]
+      - Training
+      - ce = {{float,tolerance=.1%}}
+      - learningRatePerSample = {{float,tolerance=0.001%}}
+
+  Cross Validation must finish as expected:
+    patterns:
+      - ^MPI Rank {{integer}}
+      - Finished Epoch[{{integer}} of {{integer}}]
+      - Validate
+      - ce = {{float,tolerance=.1%}}
+
+  Per-minibatch training results must match:
+    patterns:
+      - ^MPI Rank {{integer}}
+      - Epoch[{{integer}} of {{integer}}]-Minibatch[{{integer}}-{{integer}}
+      - " * {{integer}}; "
+      - ce = {{float,tolerance=.1%}}
+

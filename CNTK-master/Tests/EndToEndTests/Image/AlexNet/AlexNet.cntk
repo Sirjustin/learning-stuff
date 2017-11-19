@@ -1,0 +1,51 @@
+Train=[
+    reader=[
+        readerType=ImageReader
+        # Map file which maps images to labels using the following format:
+        # <full path to image><tab><numerical label (0-based class id)>
+        # Example:
+        # C:\Data\ImageNet\2012\train\n01440764\n01440764_10026.JPEG<tab>0
+        file=$ConfigDir$/train_map.txt
+        # Randomize images before every epoch. Possible values: None, Auto. Default: Auto.
+        randomize=Auto
+        features=[
+            # Below are the required parameters.
+            width=227
+            height=227
+            channels=3
+            # Below are the optional parameters.
+            # Possible values: Center, Random. Default: Center
+            cropType=RandomSide
+            # Horizontal random flip, will be enabled by default if cropType=Random
+            #hflip=0
+            # Crop scale side ratio. Examples: sideRatio=0.9, sideRatio=0.7:0.9.
+            sideRatio=0.875
+            # Crop scale ratio jitter type.
+            # Possible values: None, UniRatio. Default: None
+            jitterType=UniRatio
+            # Interpolation to use when scaling image to width x height size.
+            # Possible values: nearest, linear, cubic, lanczos. Default: linear.
+            interpolations=linear
+        ]
+        labels=[
+            labelDim=1000
+        ]
+    ]    
+]
+
+Test=[    
+    reader=[
+        readerType=ImageReader
+        file=$ConfigDir$/val_map.txt
+        randomize=None
+        features=[
+            width=227
+            height=227
+            channels=3
+            cropType=Center
+        ]
+        labels=[
+            labelDim=1000
+        ]
+    ]    
+]

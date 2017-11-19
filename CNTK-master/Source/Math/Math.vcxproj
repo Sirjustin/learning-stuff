@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" InitialTargets="CheckDependencies" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_NoOpt|x64">
+      <Configuration>Release_NoOpt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_CpuOnly|x64">
+      <Configuration>Debug_CpuOnly</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_CpuOnly|x64">
+      <Configuration>Release_CpuOnly</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_UWP|x64">
+      <Configuration>Debug_UWP</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_UWP|x64">
+      <Configuration>Release_UWP</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{60BDB847-D0C4-4FD3-A947-0C15C08BCDB5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Math</RootNamespace>
+    <ProjectName>Math</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\CNTK.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="$(DebugBuild)" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(ReleaseBuild)" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <TargetName>Cntk.Math$(OutputSuffix)-$(CntkComponentVersion)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MathIncludePath);$(BOOST_INCLUDE_PATH);$(SolutionDir)Source\Common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <AdditionalOptions>/d2Zi+ /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PreprocessorDefinitions>CNTK_COMPONENT_VERSION="$(CntkComponentVersion)";$(MathDefine); NO_SYNC; WIN32; _WINDOWS; _USRDLL; MATH_EXPORTS; %(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(MathLinkLibrary);Cntk.Common$(OutputSuffix)-$(CntkComponentVersion).lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>$(MathDelayLoad); $(CudaDlls); %(DelayLoadDLLs)</DelayLoadDLLs>
+      <Profile>true</Profile>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copying $(MathLibraryName) DLLs</Message>
+      <Command>xcopy /D /I /Y "$(MathPostBuildCopyPattern)" "$(OutDir)"
+        if "$(IsUWP)"=="true" xcopy /D /I /Y "$(TargetDir)$(TargetName).lib" "$(TargetDir).."
+        if "$(IsUWP)"=="true" xcopy /D /I /Y "$(TargetPath)" "$(TargetDir).."
+        if "$(IsUWP)"=="true" xcopy /D /I /Y "$(MathPostBuildCopyPattern)" "$(TargetDir).."
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(DebugBuild)">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_DEBUG; %(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CodeGeneration>$(NvidiaCompute)</CodeGeneration>
+      <CudaRuntime>None</CudaRuntime>
+      <NvccCompilation>compile</NvccCompilation>
+      <GenerateLineInfo>true</GenerateLineInfo>
+    </CudaCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(ReleaseBuild)">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <CudaCompile>
+      <FastMath>true</FastMath>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CodeGeneration>$(NvidiaCompute)</CodeGeneration>
+      <GPUDebugInfo>true</GPUDebugInfo>
+      <GenerateLineInfo>true</GenerateLineInfo>
+      <HostDebugInfo>true</HostDebugInfo>
+    </CudaCompile>
+    <CudaLink>
+      <Optimization>O3</Optimization>
+    </CudaLink>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(IsUWP)">
+    <ClCompile>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(MathLibraryPath);$(TargetDir)..;</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="!$(IsUWP)">
+    <Link>
+      <AdditionalLibraryDirectories>$(MathLibraryPath);$(OutDir);</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(GpuBuild)">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(CudaInclude)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(CudaLibPath)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(CpuOnlyBuild)">
+    <ClCompile>
+      <PreprocessorDefinitions>CPUONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <DelayLoadDLLs>$(MathDelayLoad)</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Include\TensorShape.h" />
+    <ClInclude Include="..\Common\Include\File.h" />
+    <ClInclude Include="..\Common\Include\fileutil.h" />
+    <ClInclude Include="BatchNormalizationEngine.h" />
+    <ClInclude Include="CommonMatrix.h" />
+    <ClInclude Include="ConvolutionEngine.h" />
+    <ClInclude Include="ConvolveGeometry.h" />
+    <ClInclude Include="CPUMatrix.h" />
+    <ClInclude Include="CPURNGHandle.h" />
+    <ClInclude Include="DataTransferer.h" />
+    <ClInclude Include="MatrixQuantizerImpl.h" />
+    <ClInclude Include="RNGHandle.h" />
+    <ClInclude Include="RNNCommon.h" />
+    <ClInclude Include="TensorOps.h" />
+    <ClInclude Include="TensorView.h" />
+    <ClInclude Include="Quantizers.h" />
+    <ClInclude Include="QuantizedOperations.h" />
+    <None Include="GPUWatcher.cu" />
+    <None Include="GPUWatcher.h">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="GPUSparseMatrix.h">
+      <FileType>CppHeader</FileType>
+    </None>
+    <ClInclude Include="CPUSparseMatrix.h" />
+    <ClInclude Include="CUDAPageLockedMemAllocator.h" />
+    <ClInclude Include="Helpers.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MatrixQuantizerCPU.h" />
+    <ClInclude Include="MatrixQuantizerGPU.h" />
+    <ClInclude Include="MemAllocator.h" />
+    <ClInclude Include="QuantizedMatrix.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="CPUMatrixImpl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BatchNormalizationEngine.cpp" />
+    <ClCompile Include="ConvolutionEngine.cpp" />
+    <ClCompile Include="CPUMatrixDouble.cpp" />
+    <ClCompile Include="CPUMatrixFloat.cpp" />
+    <ClCompile Include="CPURNGHandle.cpp" />
+    <ClCompile Include="CPUSparseMatrix.cpp" />
+    <ClCompile Include="CUDAPageLockedMemAllocator.cpp" />
+    <ClCompile Include="DataTransferer.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged>false</CompileAsManaged>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="MatrixQuantizerCPU.cpp" />
+    <ClCompile Include="MatrixQuantizerImpl.cpp" />
+    <ClCompile Include="NoGPU.cpp" />
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="QuantizedMatrix.cpp" />
+    <ClCompile Include="RNGHandle.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TensorView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GPUMatrix.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="CheckDependencies">
+    <Error Condition="'$(MathLibrary)' == 'MKL' And '$(CNTK_MKL_PATH)' == ''" Text="CNTK custom MKL location not specified, see https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Windows#mkl for instructions." />
+    <Error Condition="'$(MathLibrary)' == 'MKL' And !Exists('$(CNTKCustomMKLPath)')" Text="CNTK custom MKL version $(CNTKCustomMKLVersion) not found. See https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Windows#mkl for instructions." />
+    <Error Condition="'$(MathLibrary)' == 'OpenBLAS' And '$(CNTK_OPENBLAS_PATH)' == ''" Text="CNTK custom OpenBLAS location not specified, see https://docs.microsoft.com/cognitive-toolkit/Setup-UWP-Build-on-Windows for instructions." />
+    <Error Condition="'$(MathLibrary)' == 'OpenBLAS' And !Exists('$(CNTKCustomOpenBLASPath)')" Text="CNTK custom OpenBLAS version $(CNTKCustomOpenBLASVersion) not found. See https://docs.microsoft.com/cognitive-toolkit/Setup-UWP-Build-on-Windows for instructions." />
+    <Error Condition="!$(HasBoost)" Text="The Boost library is required to build. Please see https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Windows#boost for installation instructions." />
+  </Target>
+</Project>

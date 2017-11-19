@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="NoRandomizer.h">
+      <Filter>Randomizers</Filter>
+    </ClInclude>
+    <ClInclude Include="CudaMemoryProvider.h">
+      <Filter>MemoryProviders</Filter>
+    </ClInclude>
+    <ClInclude Include="HeapMemoryProvider.h">
+      <Filter>MemoryProviders</Filter>
+    </ClInclude>
+    <ClInclude Include="ReaderShim.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Reader.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="DataDeserializer.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryProvider.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Transformer.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="DataDeserializerBase.h">
+      <Filter>Deserializers</Filter>
+    </ClInclude>
+    <ClInclude Include="Bundler.h">
+      <Filter>Deserializers</Filter>
+    </ClInclude>
+    <ClInclude Include="ChunkRandomizer.h">
+      <Filter>Randomizers</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceRandomizer.h">
+      <Filter>Randomizers</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockRandomizer.h">
+      <Filter>Randomizers</Filter>
+    </ClInclude>
+    <ClInclude Include="StringToIdMap.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Packer.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="SequencePacker.h">
+      <Filter>Packers</Filter>
+    </ClInclude>
+    <ClInclude Include="PackerBase.h">
+      <Filter>Packers</Filter>
+    </ClInclude>
+    <ClInclude Include="FramePacker.h">
+      <Filter>Packers</Filter>
+    </ClInclude>
+    <ClInclude Include="TruncatedBpttPacker.h">
+      <Filter>Packers</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceEnumerator.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigUtil.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ChunkCache.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CorpusDescriptor.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="TransformController.h">
+      <Filter>Transformers</Filter>
+    </ClInclude>
+    <ClInclude Include="ExceptionCapture.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ReaderBase.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceData.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="TransformBase.h">
+      <Filter>Transformers</Filter>
+    </ClInclude>
+    <ClInclude Include="ReaderUtil.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ReaderConstants.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Index.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBuilder.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="BufferedFileReader.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="FileWrapper.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalTimelineRandomizerBase.h">
+      <Filter>Randomizers</Filter>
+    </ClInclude>
+    <ClInclude Include="LTNoRandomizer.h">
+      <Filter>Randomizers</Filter>
+    </ClInclude>
+    <ClInclude Include="LTTumblingWindowRandomizer.h">
+      <Filter>Randomizers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NoRandomizer.cpp">
+      <Filter>Randomizers</Filter>
+    </ClCompile>
+    <ClCompile Include="ReaderShim.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Bundler.cpp">
+      <Filter>Deserializers</Filter>
+    </ClCompile>
+    <ClCompile Include="ChunkRandomizer.cpp">
+      <Filter>Randomizers</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceRandomizer.cpp">
+      <Filter>Randomizers</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockRandomizer.cpp">
+      <Filter>Randomizers</Filter>
+    </ClCompile>
+    <ClCompile Include="SequencePacker.cpp">
+      <Filter>Packers</Filter>
+    </ClCompile>
+    <ClCompile Include="PackerBase.cpp">
+      <Filter>Packers</Filter>
+    </ClCompile>
+    <ClCompile Include="FramePacker.cpp">
+      <Filter>Packers</Filter>
+    </ClCompile>
+    <ClCompile Include="TruncatedBpttPacker.cpp">
+      <Filter>Packers</Filter>
+    </ClCompile>
+    <ClCompile Include="ChunkCache.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="ReaderBase.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="ReaderUtil.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="DataDeserializerBase.cpp">
+      <Filter>Deserializers</Filter>
+    </ClCompile>
+    <ClCompile Include="Index.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexBuilder.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="BufferedFileReader.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalTimelineRandomizerBase.cpp">
+      <Filter>Randomizers</Filter>
+    </ClCompile>
+    <ClCompile Include="LTNoRandomizer.cpp">
+      <Filter>Randomizers</Filter>
+    </ClCompile>
+    <ClCompile Include="LTTumblingWindowRandomizer.cpp">
+      <Filter>Randomizers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{0a7ac112-ad49-4d5e-83d8-a7640b199568}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Randomizers">
+      <UniqueIdentifier>{0e2c2f22-20f2-42c1-a5d1-d9ac7a4bd33a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packers">
+      <UniqueIdentifier>{b7203d1c-fd6e-40de-9680-ba4042ce7c7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MemoryProviders">
+      <UniqueIdentifier>{6ada575c-9f2c-476f-8c97-8617e1ecd01a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{3cd09e43-18cb-48ad-a5f7-89553c063d8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Deserializers">
+      <UniqueIdentifier>{2f73a66b-9551-41c4-91c5-cf51537b9feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Transformers">
+      <UniqueIdentifier>{90d4b51b-73ae-47f5-9a9e-97ef287dcead}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

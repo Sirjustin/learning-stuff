@@ -1,0 +1,290 @@
+#!/bin/bash
+#
+# Copyright (c) Microsoft. All rights reserved.
+# Licensed under the MIT license. See LICENSE file in the project root for full license information.
+#
+# WARNING. This will run in Microsoft Internal Environment ONLY, to generate CNTK binary drops.
+
+scriptName="$(basename "${BASH_SOURCE[0]}")"
+scriptDir="$(readlink -f "$(dirname "${BASH_SOURCE[0]}")")"
+
+parsedArgs=$(getopt -o '' --long target-configuration:,verbose,release-tag:,commit: -n "$scriptName" -- "$@")
+
+[ $? != 0 ] && {
+  echo Terminating...
+  exit 1
+}
+
+eval set -- "$parsedArgs"
+
+targetConfiguration=
+verbose= # TODO
+releaseTag=unknown
+
+while true; do
+  case "$1" in
+    --target-configuration)
+      targetConfiguration="${2,,}"
+      shift 2
+      ;;
+    --commit)
+      commit="${2,,}"
+      shift 2
+      ;;
+    --release-tag)
+      releaseTag="${2,,}"
+      shift 2
+      ;;
+    --verbose)
+      verbose=1
+      shift
+      ;;
+    --)
+      shift
+      break
+      ;;
+  esac
+done
+
+[ $# = 0 ] || {
+  echo Extra parameters detected: $*
+  exit 1
+}
+
+[[ -n $commit ]] || {
+  echo Must specify --commit option.
+  exit 1
+}
+
+case $targetConfiguration in
+    cpu)
+        publicTargetConfiguration=CPU-Only
+        ;;
+    gpu)
+        publicTargetConfiguration=GPU
+        ;;
+    1bitsgd)
+        publicTargetConfiguration=GPU-1bit-SGD
+        ;;
+    '')
+        echo Must specify --target-configuration option.
+        exit 1
+        ;;
+    *)
+        echo Unknown target configuration $targetConfiguration.
+        exit 1
+        ;;
+esac
+
+[[ $releaseTag = unknown ]] || [[ $releaseTag =~ ^[1-9][0-9a-z-]*$ ]] || {
+  echo \'--release-tag $releaseTag\' option does not match expected format.
+  exit 1
+}
+
+outputFile=CNTK-$releaseTag-Linux-64bit-$publicTargetConfiguration.tar.gz
+
+# Stop on Error
+set -e -o pipefail
+
+# Enable verbose mode if needed
+# stderr is NOT changed
+if [[ -n $verbose ]]; then
+    exec 3>&1
+else
+    exec 3>/dev/null
+fi
+
+# Define helper function
+
+# File List Copy function
+# usage: CopyFilesFromList source_path file_name_array destination_path
+function CopyFilesFromList ()
+{
+    declare -a fileNames=(${!2})
+    for fileName in "${fileNames[@]}"
+    do
+        cp -p "$1/$fileName" "$3"
+    done
+}
+
+# Main script
+
+echo "Making binary drops..." >&3
+
+cd "$scriptDir/.."
+
+# Dependency files
+
+# MKL
+declare -a mklFiles=("libmkl_cntk_p.so" "libiomp5.so")
+
+# Open CV
+declare -a opencvFiles=("libopencv_core.so.3.1" "libopencv_imgproc.so.3.1" "libopencv_imgproc.so.3.1" "libopencv_imgcodecs.so.3.1")
+
+# libzip
+declare -a libzipFiles=("libzip.so.4")
+
+# CUDA
+declare -a cudaFiles=("libcudart.so.8.0" "libcublas.so.8.0" "libcurand.so.8.0" "libcusparse.so.8.0")
+
+# cuDNN
+# Note: can be only a single file currently, see copy below.
+declare -a cudnnFiles=("libcudnn.so")
+
+# OpenBLAS (Needed by Kaldi)
+declare -a openblasFiles=("libopenblas.so.0")
+
+# Kaldi
+declare -a kaldiFiles=("libkaldi-util.so" "libkaldi-matrix.so" "libkaldi-base.so" "libkaldi-hmm.so" "libkaldi-cudamatrix.so" "libkaldi-nnet.so" "libkaldi-lat.so" "libkaldi-tree.so")
+
+# OpenFst (from Kaldi)
+declare -a openfstFiles=("libfst.so.3")
+
+# Include files
+declare -a includeFiles=("Eval.h")
+
+# Include files 2.0
+declare -a includeFiles20=("CNTKLibrary.h" "CNTKLibraryInternals.h")
+
+# Set dependency sources paths
+mklVersion="3"
+mklPath="/usr/local/CNTKCustomMKL/$mklVersion/x64/parallel"
+opencvVersion="3.1.0"
+opencvPath="/usr/local/opencv-$opencvVersion/lib"
+libzipPath="/usr/local/lib"
+cudaPath="/usr/local/cuda/lib64"
+cudnnPath="/usr/local/cudnn-6.0/cuda/lib64"
+openblasPath="/usr/local/openblas/lib"
+kaldiVersion="c024e8aa"
+kaldiPath="/usr/local/kaldi-$kaldiVersion/src/lib"
+openfstPath="/usr/local/kaldi-$kaldiVersion/tools/openfst/lib"
+
+# Set build paths
+buildPath="build/$targetConfiguration/release"
+basePath="BinaryDrops"
+baseDropPath="$basePath/cntk"
+baseBinariesPath="$baseDropPath/cntk"
+baseDependenciesPath="$baseBinariesPath/dependencies/lib"
+baseIncludePath="$baseDropPath/Include"
+includePath="Source/Common/Include"
+includePath20="Source/CNTKv2LibraryDll/API"
+extrasPath="Tools/cntk-binary-drop/linux/$targetConfiguration"
+
+# Make BinaryDrops directory
+mkdir -p $baseBinariesPath
+
+echo "Copying Python wheels..." >&3
+mkdir $basePath/$publicTargetConfiguration
+cp -p $buildPath/python/*.whl $basePath/$publicTargetConfiguration
+
+echo "Copying build binaries..." >&3
+cp -pr $buildPath/* $baseBinariesPath
+# Remove unnecessary file(s) if exist(s)
+#
+# General TODO: Implement White List of Binary Drop contents.
+# For the time being "cherry pick"  removal of unneeded files
+#
+rm -f $baseBinariesPath/bin/brainscripttests
+rm -f $baseBinariesPath/bin/cppevalclient
+rm -f $baseBinariesPath/bin/cppevalextendedclient
+rm -f $baseBinariesPath/bin/cppevalv2client
+rm -f $baseBinariesPath/bin/evaltests
+rm -f $baseBinariesPath/bin/mathtests
+rm -f $baseBinariesPath/bin/multiversotests
+rm -f $baseBinariesPath/bin/networktests
+rm -f $baseBinariesPath/bin/readertests
+rm -f $baseBinariesPath/bin/V2LibraryEndToEndTests 
+rm -f $baseBinariesPath/bin/v2librarytests
+rm -rf $baseBinariesPath/python
+rm -f $baseBinariesPath/lib/java/Main.class
+
+# Make Include directory
+mkdir -p $baseIncludePath
+
+# Copy Include
+echo "Copying Include files..." >&3
+CopyFilesFromList $includePath includeFiles[@] $baseIncludePath
+echo "Copying Include files for Version 2..." >&3
+CopyFilesFromList $includePath20 includeFiles20[@] $baseIncludePath
+
+# Copy Examples
+echo "Copying Examples..." >&3
+cp -pr Examples $baseDropPath
+
+# Copy Tutorials
+echo "Copying Tutorials..." >&3
+cp -pr Tutorials $baseDropPath
+
+# Copy Manual
+echo "Copying Manual..." >&3
+cp -pr Manual $baseDropPath
+
+# Copy Scripts (Scripts folder from the root of the Repo)
+echo "Copying Scripts..." >&3
+cp -pr Scripts $baseDropPath
+# Remove some unneeded files
+rm -f $baseDropPath/Scripts/pytest.ini
+rm -rf $baseDropPath/Scripts/install/windows
+
+# Copy Extras
+echo "Copying Extras..." >&3
+cp -pr $extrasPath/* $baseDropPath
+
+# Copy Dependencies
+echo "Copying Dependencies..." >&3
+
+# Make dependencies directory
+mkdir -p $baseDependenciesPath
+
+# Copy MKL
+echo "Copying MKL" >&3
+CopyFilesFromList $mklPath mklFiles[@] $baseDependenciesPath
+
+# Copy Open CV
+echo "Copying Open CV..." >&3
+CopyFilesFromList $opencvPath opencvFiles[@] $baseDependenciesPath
+
+# Copy libzip
+echo "Copying libzip..." >&3
+CopyFilesFromList $libzipPath libzipFiles[@] $baseDependenciesPath
+
+# Copy OpenBLAS (for Kaldi)
+echo "Copying OpenBLAS (for Kaldi)..." >&3
+CopyFilesFromList $openblasPath openblasFiles[@] $baseDependenciesPath
+
+# Copy Kaldi
+echo "Copying Kaldi..." >&3
+CopyFilesFromList $kaldiPath kaldiFiles[@] $baseDependenciesPath
+
+# Copy OpenFst (from Kaldi)
+echo "Copying OpenFst (Kaldi)..." >&3
+CopyFilesFromList $openfstPath openfstFiles[@] $baseDependenciesPath
+
+# GPU Drops only
+if [[ $targetConfiguration != "cpu" ]]; then
+
+    # Copy CUDA
+    echo "Copying CUDA..." >&3
+    CopyFilesFromList $cudaPath cudaFiles[@] $baseDependenciesPath
+
+    # Copy cuDNN
+    echo "Copying cuDNN..." >&3
+    CopyFilesFromList $cudnnPath cudnnFiles[@] $baseDependenciesPath/libcudnn.so.6
+
+fi
+
+echo "Creating version.txt file" >&3
+printf 'CNTK-%s\nRelease\n%s\n%s\n' \
+  "$releaseTag" "$publicTargetConfiguration" "$commit" \
+  > $baseDropPath/version.txt
+
+echo "Making Archive and cleaning up..." >&3
+# Make GZipped TAR
+cd $basePath
+tar --owner=root ${verbose:+-v} -czf "$outputFile" cntk
+
+# Log some file hashes
+sha256sum "$outputFile" $publicTargetConfiguration/*.whl
+
+# Remove TAR sources
+rm -r cntk

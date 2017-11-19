@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" InitialTargets="CheckDependencies" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_NoOpt|x64">
+      <Configuration>Release_NoOpt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B3DD765E-694E-4494-BAD7-37BBF2942517}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Math</RootNamespace>
+    <ProjectName>MathCUDA</ProjectName>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(SolutionDir)\CNTK.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Choose>
+    <When Condition="Exists('$(CUDNN_PATH)')">
+      <PropertyGroup>
+        <UseCuDnn>true</UseCuDnn>
+        <CuDnnDefine>USE_CUDNN</CuDnnDefine>
+        <CuDnnIncPath>$(CUDNN_PATH)\include</CuDnnIncPath>
+        <CuDnnLibPath>$(CUDNN_PATH)\lib\x64</CuDnnLibPath>
+        <CuDnnLib>cudnn.lib</CuDnnLib>
+        <CuDnnDll>$(CUDNN_PATH)\bin\cudnn64_*.dll</CuDnnDll>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup>
+        <UseCuDnn>false</UseCuDnn>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  <PropertyGroup>
+    <CudaToolkitCustomDir>$(CudaPath)</CudaToolkitCustomDir>
+    <IntDir>$(IntDir)\MathCUDA\</IntDir>
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(CudaPropsPath)" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <TargetName>Cntk.Math.Cuda-$(CntkComponentVersion)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>NO_SYNC; WIN32; _WINDOWS; _USRDLL; MATH_EXPORTS; $(CuDnnDefine); %(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Source\Common\include;$(CudaInclude);$(CUB_PATH);$(CuDnnIncPath)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(CudaLibs);%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>$(CudaDlls);%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(OutDir);$(CudaLibPath);$(CuDnnLibPath)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CuDnnLib)</AdditionalDependencies>
+    </Lib>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <GenerateLineInfo>true</GenerateLineInfo>
+      <AdditionalCompilerOptions>/WX</AdditionalCompilerOptions>
+      <CodeGeneration>$(NvidiaCompute)</CodeGeneration>
+      <FastMath>true</FastMath>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <GPUDebugInfo Condition="'$(CNTK_CUDA_DEVICE_DEBUGINFO)'=='1'">true</GPUDebugInfo>
+      <AdditionalOptions>-Xcudafe "--diag_suppress=field_without_dll_interface" -Xcompiler "/wd 4819" %(AdditionalOptions)</AdditionalOptions>
+    </CudaCompile>
+    <PostBuildEvent>
+      <Command>for %%l in ($(CudaDlls)) do if exist "$(CudaPath)\bin\%%l" xcopy /D /Y "$(CudaPath)\bin\%%l*" "$(OutputPath)"
+xcopy /D /Y "$(CuDnnDll)" "$(OutputPath)"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(DebugBuild)">
+    <ClCompile>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(ReleaseBuild)">
+    <ClCompile>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <AdditionalOptions>/d2Zi+ %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <CudaCompile>
+      <HostDebugInfo>false</HostDebugInfo>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Include\File.h" />
+    <ClInclude Include="..\Common\Include\fileutil.h" />
+    <ClInclude Include="CntkBatchNormalization.cuh" />
+    <ClInclude Include="ColumnQuantizer.h" />
+    <ClInclude Include="CommonMatrix.h" />
+    <ClInclude Include="cudabasetypes.h" />
+    <ClInclude Include="cudadevice.h" />
+    <ClInclude Include="cudalattice.h" />
+    <ClInclude Include="cudalatticeops.cu.h" />
+    <ClInclude Include="cudalatticeops.h" />
+    <ClInclude Include="cudalib.h" />
+    <ClInclude Include="CuDnnCommon.h" />
+    <ClInclude Include="CuDnnFactories.h" />
+    <ClInclude Include="CuDnnRNN.h" />
+    <ClInclude Include="GPUDataTransferer.h" />
+    <ClInclude Include="GPURNGHandle.h" />
+    <ClInclude Include="GPUTensor.h" />
+    <ClInclude Include="latticefunctionskernels.h" />
+    <ClInclude Include="Convolution.cuh" />
+    <ClInclude Include="TensorOps.h" />
+    <ClInclude Include="ValueQuantizer.h" />
+    <None Include="GPUWatcher.h">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="GPUSparseMatrix.h">
+      <FileType>CppHeader</FileType>
+    </None>
+    <ClInclude Include="Helpers.h" />
+    <ClInclude Include="MatrixQuantizerGPU.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="CuDnnBatchNormalization.cu">
+      <FileType>CppCode</FileType>
+    </CudaCompile>
+    <CudaCompile Include="GPURNGHandle.cu">
+      <FileType>CppCode</FileType>
+    </CudaCompile>
+    <CudaCompile Include="GPUTensor.cu">
+      <InterleaveSourceInPTX Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</InterleaveSourceInPTX>
+      <InterleaveSourceInPTX Condition="'$(Configuration)|$(Platform)'=='Release_NoOpt|x64'">true</InterleaveSourceInPTX>
+      <Keep Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</Keep>
+      <Keep Condition="'$(Configuration)|$(Platform)'=='Release_NoOpt|x64'">true</Keep>
+      <FileType>CppCode</FileType>
+    </CudaCompile>
+    <CudaCompile Include="cudalatticeops.cu">
+      <FileType>CppCode</FileType>
+    </CudaCompile>
+    <CudaCompile Include="GPUSparseMatrix.cu">
+      <FileType>CppCode</FileType>
+    </CudaCompile>
+    <CudaCompile Include="GPUWatcher.cu">
+      <FileType>CppCode</FileType>
+    </CudaCompile>
+    <ClCompile Include="cudalattice.cpp" />
+    <ClCompile Include="cudalib.cpp" />
+    <CudaCompile Include="CuDnnConvolutionEngine.cu">
+      <FileType>CppCode</FileType>
+    </CudaCompile>
+    <ClCompile Include="CuDnnCommon.cpp" />
+    <ClCompile Include="CuDnnRNN.cpp" />
+    <ClCompile Include="GPUDataTransferer.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <CudaCompile Include="MatrixQuantizerGPU.cu">
+      <FileType>CppCode</FileType>
+    </CudaCompile>
+    <CudaCompile Include="MatrixQuantizer_kernel.cu">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+      <FileType>CppCode</FileType>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="GPUMatrix.cu">
+      <FileType>CppCode</FileType>
+      <Keep Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</Keep>
+      <Keep Condition="'$(Configuration)|$(Platform)'=='Release_NoOpt|x64'">true</Keep>
+      <InterleaveSourceInPTX Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</InterleaveSourceInPTX>
+      <InterleaveSourceInPTX Condition="'$(Configuration)|$(Platform)'=='Release_NoOpt|x64'">false</InterleaveSourceInPTX>
+    </CudaCompile>
+    <CudaCompile Include="GPUMatrixCUDAKernels.cuh">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+      <FileType>CppCode</FileType>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GPUMatrix.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(CudaTargetsPath)" />
+  </ImportGroup>
+  <Target Name="CheckDependencies">
+    <Error Condition="!Exists('$(CUB_PATH)')" Text="CNTK requires the NVIDIA CUB library to build. Please see https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Windows#nvidia-cuda-8 for installation instructions." />
+    <Error Condition="!Exists('$(CUDNN_PATH)')" Text="CNTK requires the NVIDIA cuDNN library 5.0 or higher to build. Please see https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Windows#nvidia-cuda-8 for installation instructions." />
+  </Target>
+</Project>

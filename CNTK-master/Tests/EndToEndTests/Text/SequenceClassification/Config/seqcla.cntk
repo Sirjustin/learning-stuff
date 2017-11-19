@@ -1,0 +1,107 @@
+# Copyright (c) Microsoft. All rights reserved.
+# Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+RootDir = ".."
+
+ConfigDir = "$RootDir$/Config"
+DataDir   = "$RootDir$/Data"
+OutputDir = "$RootDir$/Output"
+ModelDir  = "$OutputDir$/Models"
+
+command=Train #:Write
+deviceId = $DeviceId$
+modelPath="$ModelDir$/seqcla.dnn"
+makeMode = false # set true to enable checkpointing
+
+vocabDim = 2000
+
+Train=[
+    action="train"
+    
+    BrainScriptNetworkBuilder=[
+        # LSTM params
+        lstmDim = 25
+        cellDim = 25
+
+        # model dims
+        numLabels = 5
+        vocabDim = $vocabDim$
+        embedDim = 50
+
+        # define the model, by composing layer functions
+        model = Sequential
+        (
+            EmbeddingLayer {embedDim, embeddingPath='embeddingmatrix.txt', transpose=true} :  # load the pre-learned word embedding matrix
+            RecurrentLSTMLayer {lstmDim, cellShape=cellDim, init="gaussian"} :
+            BS.Sequences.Last :
+            DenseLayer {numLabels, init="gaussian"}  # using "gaussian" for back compat/regresson tests only
+        )
+
+        # inputs
+        t = DynamicAxis{}
+        features = SparseInput {$vocabDim$, dynamicAxis=t}  # Input has shape (vocabDim,t) and is one-hot sparse
+        labels   =       Input {numLabels}                  # Input has shape (numLabels,*) where all sequences in *=1
+
+        # apply model
+        z = model (features)
+
+        # Make sure the trainer understands that the time dimension of l3 is actually the same as that of labels.
+        zp = ReconcileDynamicAxis(z, labels)
+
+        # training criteria
+        ce  = CrossEntropyWithSoftmax (labels, zp)  // this is the training objective
+        err = ClassificationError     (labels, zp)  // this also gets tracked
+
+        # connect to system
+        featureNodes    = (features)
+        labelNodes      = (labels)
+        criterionNodes  = (ce)
+        evaluationNodes = (err)
+        outputNodes     = (z)
+    ]
+
+    SGD = [	
+        epochSize = 0
+        minibatchSize = 200
+        maxEpochs = 5
+        momentumPerMB = 0.9
+        learningRatesPerMB = 0.1
+        # We are testing checkpointing, keep all checkpoint (.ckp) files
+        keepCheckPointFiles = true
+    ]
+
+    reader = [
+        readerType = "CNTKTextFormatReader"
+        #file = "$DataDir$/Train.txt"
+        file = "$DataDir$/Train.ctf"
+        input = [
+            features = [ alias = "x" ; dim = $vocabDim$ ; format = "sparse" ]
+            labels =   [ alias = "y" ; dim = 5          ; format = "dense" ]
+        ]
+   ]    
+   outputPath = "$OutputDir$/output.txt"        # dump the output as text?
+]
+
+# this is currently not used
+Write=[
+    action="test"   # TODO: test vs. Write?
+
+    modelFile = "$ModelDir$/seqcla.dnn"    
+
+    format = [
+      # %n = minibatch, %x = shape, %d = sequenceId
+      sequencePrologue=%d\t|w.shape %x\n%d\t|w\s
+      sampleSeparator=\n%d\t|w\s
+      elementSeparator=\s
+    ]
+
+    reader = [
+        readerType = "CNTKTextFormatReader"
+        file = "$DataDir$/Train.txt"            
+        input = [
+            features = [ alias = "x" ; dim = $vocabDim$ ; format = "sparse" ]
+            labels =   [ alias = "y" ; dim = 5          ; format = "dense" ]
+        ]
+   ]    
+   outputPath = "$OutputDir$/output.txt"        # dump the output as text?
+]

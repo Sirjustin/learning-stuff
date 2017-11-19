@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Common\ReaderTestHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SequentialDeserializer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="HTKLMFReaderTests.cpp" />
+    <ClCompile Include="ReaderLibTests.cpp" />
+    <ClCompile Include="ImageReaderTests.cpp" />
+    <ClCompile Include="CNTKTextFormatReaderTests.cpp" />
+    <ClCompile Include="..\..\..\Source\Readers\CNTKTextFormatReader\TextParser.cpp">
+      <Filter>Linked Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CNTKBinaryReaderTests.cpp" />
+    <ClCompile Include="ReaderUtilTests.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{c448395c-93e6-46ab-adda-9e09683d7098}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{73a7917d-7dae-4d52-89ab-9aa5ab0632d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{2803cda6-39ec-416a-9054-e5fc7e442626}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control">
+      <UniqueIdentifier>{024ba6c7-74fe-4a89-a5e9-394e46c13f82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\images">
+      <UniqueIdentifier>{eb1dd93b-a95c-4576-a18c-7cfb0ee7001f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control\CNTKTextFormatReader">
+      <UniqueIdentifier>{c21fefe0-0a55-46d4-ba7d-6eb9d894428d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\CNTKTextFormatReader">
+      <UniqueIdentifier>{3ad98fee-303d-4ff2-895b-b7bb4729b693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config\CNTKTextFormatReader">
+      <UniqueIdentifier>{c5c622b9-b6c3-4209-bf37-294862c64a06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Linked Source">
+      <UniqueIdentifier>{1a107324-82f9-49cc-a77d-a8591b21aebb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config\HTKDeserializers">
+      <UniqueIdentifier>{b2a5f515-1b00-4f19-bd19-8e3fd7eb6872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config\CNTKBinaryReader">
+      <UniqueIdentifier>{46df705e-a35d-4bb8-9272-92c7cb293079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control\CNTKBinaryReader">
+      <UniqueIdentifier>{4194f906-450f-4112-841d-c80b3f90081e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\CNTKBinaryReader">
+      <UniqueIdentifier>{4637ff35-9ba4-4850-bfe5-d534c5920388}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Data\ImageReaderSimple_map.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="Data\UCIFastReaderSimpleDataLoop_Mapping.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="Data\UCIFastReaderSimpleDataLoop_Train.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop1_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop2_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop3_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop4_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop5_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop6_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop7_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop8_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop9_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop10_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop11_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop12_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop13_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop14_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop16_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop17_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop19_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop20_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop21_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop22_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\ImageReaderSimple_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Config\UCIFastReaderSimpleDataLoop_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <None Include="Config\ImageReaderZip_Config.cntk">
+      <Filter>Config</Filter>
+    </None>
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop1_5_11_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop2_12_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop3_13_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop6_16_17_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop4_8_14_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop9_19_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop10_20_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop7_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop21_0_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop21_1_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop22_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Control\UCIFastReaderSimpleDataLoop_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Config\ImageReaderSimple_Config.cntk">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="Control\ImageReaderSimple_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Control\ImageReaderZip_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Data\ImageReaderSimple_map.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="Data\ImageReaderZip_map.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="Data\ImageReaderBadLabel_map.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="Data\ImageReaderBadMap_map.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="Data\ImageReaderLabelOutOfRange_map.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\1x1_dense.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\1x1_sparse.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\MNIST_dense.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\Simple_dense.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\1x1_1_dense.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\1x1_2_dense.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\1x1_sparse.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\MNIST_dense.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\Simple_dense.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\10x1_MI_1_dense.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\10x1_MI_2_dense.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\100x1_1_dense.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\100x1_2_dense.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\10x1_MI_dense.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\100x1_dense.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\ImageReaderMultiView_map.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="Control\ImageReaderMultiView_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\missing_trailing_newline.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\missing_trailing_newline.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\contains_blank_lines.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\space_separated.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\space_separated.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\blank_lines.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\duplicate_inputs.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\empty_samples.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\empty_samples.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\ref_data_with_escape_sequences.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\ref_data_with_escape_sequences.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\invalid_input.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\invalid_input_Control.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\ImageReaderColorTransform_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Data\ImageReaderGrayscale_map.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="Control\ImageReaderGrayscale_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Control\ImageReaderIntensityTransform_Control.txt">
+      <Filter>Control</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\100x100x3_jagged_sequences_dense.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\200x200x2_seq2seq_dense.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\100x100x3_jagged_sequences_dense_sorted.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKTextFormatReader\200x200x2_seq2seq_dense_sorted.txt">
+      <Filter>Control\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\5x5_jagged.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\5x10_and_5x5_jagged.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\CNTKTextFormatReader\5x10_jagged.txt">
+      <Filter>Data\CNTKTextFormatReader</Filter>
+    </Text>
+    <Text Include="Data\ImageReaderMissingImage_map.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="Data\ImageAndTextReaderSimple_labels.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="Data\ImageAndTextReaderSimple_map.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="Control\CNTKBinaryReader\Simple_dense.txt">
+      <Filter>Control\CNTKBinaryReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKBinaryReader\Simple_dense_312.txt">
+      <Filter>Control\CNTKBinaryReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKBinaryReader\Simple_sparse.txt">
+      <Filter>Control\CNTKBinaryReader</Filter>
+    </Text>
+    <Text Include="Control\CNTKBinaryReader\Simple_sparse_seq.txt">
+      <Filter>Control\CNTKBinaryReader</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Data\images\black.jpg">
+      <Filter>Data\images</Filter>
+    </Image>
+    <Image Include="Data\images\blue.jpg">
+      <Filter>Data\images</Filter>
+    </Image>
+    <Image Include="Data\images\green.jpg">
+      <Filter>Data\images</Filter>
+    </Image>
+    <Image Include="Data\images\red.jpg">
+      <Filter>Data\images</Filter>
+    </Image>
+    <Image Include="Data\images\multi.png">
+      <Filter>Data\images</Filter>
+    </Image>
+    <Image Include="Data\images\grayscale.png">
+      <Filter>Data\images</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\images\chunk0.zip">
+      <Filter>Data\images</Filter>
+    </None>
+    <None Include="Data\images\chunk1.zip">
+      <Filter>Data\images</Filter>
+    </None>
+    <None Include="Data\images\simple.zip">
+      <Filter>Data\images</Filter>
+    </None>
+    <None Include="Config\ImageReaderBadLabel_Config.cntk">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="Config\ImageReaderBadMap_Config.cntk">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="Config\ImageReaderLabelOutOfRange_Config.cntk">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="Config\CNTKTextFormatReader\dense.cntk">
+      <Filter>Config\CNTKTextFormatReader</Filter>
+    </None>
+    <None Include="Config\CNTKTextFormatReader\sparse.cntk">
+      <Filter>Config\CNTKTextFormatReader</Filter>
+    </None>
+    <None Include="Config\ImageReaderMultiView_Config.cntk">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="Config\CNTKTextFormatReader\edge_cases.cntk">
+      <Filter>Config\CNTKTextFormatReader</Filter>
+    </None>
+    <None Include="Config\ImageReaderColorTransform_Config.cntk">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="Config\ImageReaderGrayscale_Config.cntk">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="Config\ImageReaderIntensityTransform_Config.cntk">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="Config\HTKDeserializersSimpleDataLoop1_Config.cntk">
+      <Filter>Config\HTKDeserializers</Filter>
+    </None>
+    <None Include="Config\HTKDeserializersSimpleDataLoop3_Config.cntk">
+      <Filter>Config\HTKDeserializers</Filter>
+    </None>
+    <None Include="Config\HTKDeserializersSimpleDataLoop4_Config.cntk">
+      <Filter>Config\HTKDeserializers</Filter>
+    </None>
+    <None Include="Config\HTKDeserializersSimpleDataLoop5_Config.cntk">
+      <Filter>Config\HTKDeserializers</Filter>
+    </None>
+    <None Include="Config\HTKDeserializersSimpleDataLoop8_Config.cntk">
+      <Filter>Config\HTKDeserializers</Filter>
+    </None>
+    <None Include="Config\HTKDeserializersSimpleDataLoop9_Config.cntk">
+      <Filter>Config\HTKDeserializers</Filter>
+    </None>
+    <None Include="Config\HTKDeserializersSimpleDataLoop10_Config.cntk">
+      <Filter>Config\HTKDeserializers</Filter>
+    </None>
+    <None Include="Config\HTKDeserializersSimpleDataLoop14_Config.cntk">
+      <Filter>Config\HTKDeserializers</Filter>
+    </None>
+    <None Include="Config\HTKDeserializersSimpleDataLoop19_Config.cntk">
+      <Filter>Config\HTKDeserializers</Filter>
+    </None>
+    <None Include="Config\HTKDeserializersSimpleDataLoop20_Config.cntk">
+      <Filter>Config\HTKDeserializers</Filter>
+    </None>
+    <None Include="Config\HTKDeserializersSimpleDataLoop21_Config.cntk">
+      <Filter>Config\HTKDeserializers</Filter>
+    </None>
+    <None Include="Config\ImageAndTextReaderSimple_Config.cntk">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="Config\HTKDeserializersSimpleDataLoop11_Config.cntk">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="Config\ImageTransforms_Config.cntk">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="Config\ImageDeserializers.cntk">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="Config\CNTKBinaryReader\test.cntk">
+      <Filter>Config\CNTKBinaryReader</Filter>
+    </None>
+    <None Include="Data\CNTKBinaryReader\simple.bin">
+      <Filter>Data\CNTKBinaryReader</Filter>
+    </None>
+    <None Include="Data\CNTKBinaryReader\sparseoutput.bin">
+      <Filter>Data\CNTKBinaryReader</Filter>
+    </None>
+    <None Include="Data\CNTKBinaryReader\sparseseqoutput.bin">
+      <Filter>Data\CNTKBinaryReader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Data\ImageNet1K_intensity.xml">
+      <Filter>Data</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>

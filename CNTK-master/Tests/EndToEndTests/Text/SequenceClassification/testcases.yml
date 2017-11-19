@@ -1,0 +1,33 @@
+dataDir: ./Data
+tags:
+     - bvt-s (build_sku == 'gpu') and ((flavor == 'release') if (os == 'windows') else ((flavor == 'debug') ^ (device == 'cpu')))
+     - nightly-s (build_sku == 'gpu')
+     - weekly-s (build_sku == 'gpu')
+
+testCases:
+  CNTK Run must be completed:
+    patterns:
+      - __COMPLETED__
+
+# Note: These log messages have been removed.
+#  Must train epochs in exactly same order and parameters:
+#    patterns:
+#      - Starting Epoch {{integer}}
+#      - learning rate per sample = {{float}}
+#      - momentum = {{float}}
+
+  Epochs must be finished with expected results:
+    patterns:
+      - Finished Epoch[{{integer}} of {{integer}}]
+      - ce = {{float,tolerance=.5%}}
+      # TODO GPU has an initial EvalErr rate which is larger than on CPU and otherwise. 
+      # In later epochs the results are aligned. Why?
+      - err = {{float,tolerance=13%}}
+      - learningRatePerSample = {{float,tolerance=0.001%}}
+
+#  Per-minibatch training results must match:
+#    patterns:
+#      - Epoch[{{integer}} of {{integer}}]-Minibatch[{{integer}}-{{integer}}
+#      - " * {{integer}}; "
+#      - ce = {{float,tolerance=.5%}}
+#      - EvalClassificationError = {{float,tolerance=.5%}}

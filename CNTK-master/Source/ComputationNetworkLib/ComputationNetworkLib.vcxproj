@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" InitialTargets="CheckDependencies" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_NoOpt|x64">
+      <Configuration>Release_NoOpt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_CpuOnly|x64">
+      <Configuration>Debug_CpuOnly</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_CpuOnly|x64">
+      <Configuration>Release_CpuOnly</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_UWP|x64">
+      <Configuration>Debug_UWP</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_UWP|x64">
+      <Configuration>Release_UWP</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{928ABD1B-4D3B-4017-AEF1-0FA1B4467513}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CNTK</RootNamespace>
+    <ProjectName>ComputationNetworkLib</ProjectName>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\CNTK.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <TargetName>Cntk.ComputationNetwork$(OutputSuffix)-$(CntkComponentVersion)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Source\SequenceTrainingLib;$(BOOST_INCLUDE_PATH);$(SolutionDir)Source\CNTKv2LibraryDll\API;$(SolutionDir)Source\CNTKv2LibraryDll;$(SolutionDir)Source\Math;$(SolutionDir)Source\Common\Include;$(SolutionDir)Source\CNTK\BrainScript;$(SolutionDir)Source\ActionsLib;$(MSMPI_INC);$(NvmlInclude)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(MSMPI_LIB64);$(OutDir);$(NvmlLib)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Cntk.Math-$(CntkComponentVersion).lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>Cntk.Math-$(CntkComponentVersion).dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(DebugBuild)">
+    <ClCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(ReleaseBuild)">
+    <ClCompile>
+      <AdditionalOptions>/d2Zi+ /bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(CpuOnlyBuild)">
+    <ClCompile>
+      <PreprocessorDefinitions>CPUONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(GpuBuild)">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(CudaInclude)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(CudaLibPath)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>%(DelayLoadDLLs);nvml.dll;$(CudaRuntimeDll)</DelayLoadDLLs>
+    </Link>
+    <PostBuildEvent>
+      <Command>if exist "$(NvmlDll)" xcopy /I /D /Y "$(NvmlDll)" "$(TargetDir)"</Command>
+      <Message>Copying NVidia GDK extension DLL to target folder</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(IsUWP)">
+    <PostBuildEvent>
+      <Command>
+        xcopy /D /I /Y "$(TargetDir)$(TargetName).lib" "$(TargetDir).."
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\CrossProcessMutex.h" />
+    <ClInclude Include="..\Common\Include\Basics.h" />
+    <ClInclude Include="..\Common\Include\BestGpu.h" />
+    <ClInclude Include="..\Common\Include\Config.h" />
+    <ClInclude Include="..\Common\Include\TensorShape.h" />
+    <ClInclude Include="..\Common\Include\File.h" />
+    <ClInclude Include="..\Common\Include\fileutil.h" />
+    <ClInclude Include="..\Common\Include\Platform.h" />
+    <ClInclude Include="..\Common\Include\ScriptableObjects.h" />
+    <ClInclude Include="..\Common\Include\Sequences.h" />
+    <ClInclude Include="..\Common\Include\TimerUtility.h" />
+    <ClInclude Include="..\Math\Matrix.h" />
+    <ClInclude Include="ComputationEnvironment.h" />
+    <ClInclude Include="ComputationNetwork.h" />
+    <ClInclude Include="ComputationNetworkBuilder.h" />
+    <ClInclude Include="ComputationNode.h" />
+    <ClInclude Include="ConvolutionalNodes.h" />
+    <ClInclude Include="DeprecatedNodes.h" />
+    <ClInclude Include="PreComputeNodes.h" />
+    <ClInclude Include="RNNNodes.h" />
+    <ClInclude Include="SequenceReshapeNodes.h" />
+    <ClInclude Include="SpecialPurposeNodes.h" />
+    <ClInclude Include="EvaluationNodes.h" />
+    <ClInclude Include="InputAndParamNodes.h" />
+    <ClInclude Include="LinearAlgebraNodes.h" />
+    <ClInclude Include="MatrixPool.h" />
+    <ClInclude Include="NonlinearityNodes.h" />
+    <ClInclude Include="RecurrentNodes.h" />
+    <ClInclude Include="ReshapingNodes.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TrainingNodes.h" />
+    <ClInclude Include="UserDefinedV2FunctionNode.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\BestGpu.cpp" />
+    <ClCompile Include="ComputationNetwork.cpp" />
+    <ClCompile Include="ComputationNetworkAnalysis.cpp" />
+    <ClCompile Include="ComputationNetworkBuilder.cpp" />
+    <ClCompile Include="ComputationNetworkEditing.cpp" />
+    <ClCompile Include="ComputationNetworkEvaluation.cpp" />
+    <ClCompile Include="ComputationNetworkScripting.cpp" />
+    <ClCompile Include="ComputationNode.cpp" />
+    <ClCompile Include="ComputationNodeScripting.cpp" />
+    <ClCompile Include="InputAndParamNodes.cpp" />
+    <ClCompile Include="RecurrentNodes.cpp" />
+    <ClCompile Include="LinearAlgebraNodes.cpp" />
+    <ClCompile Include="ReshapingNodes.cpp" />
+    <ClCompile Include="RNNNodes.cpp" />
+    <ClCompile Include="SpecialPurposeNodes.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="TrainingNodes.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="CheckDependencies">
+    <Error Condition="!$(HasBoost)" Text="ComputationalNetworkLib requires the Boost library to build. Please see https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Windows#boost for installation instructions." />
+  </Target>
+</Project>

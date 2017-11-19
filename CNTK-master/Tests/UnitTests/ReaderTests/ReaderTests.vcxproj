@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" InitialTargets="CheckDependencies" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_NoOpt|x64">
+      <Configuration>Release_NoOpt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_CpuOnly|x64">
+      <Configuration>Debug_CpuOnly</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_CpuOnly|x64">
+      <Configuration>Release_CpuOnly</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A4FC3467-4787-43E8-BBC0-D79AE56B468D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>HTKLMFReaderTests</RootNamespace>
+    <ProjectName>ReaderTests</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(SolutionDir)\CNTK.Cpp.props" />
+  <PropertyGroup>
+    <ImageReaderDefine Condition="$(HasOpenCv)">ENABLE_IMAGEREADER_TESTS</ImageReaderDefine>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(DebugBuild)" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(ReleaseBuild)" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Source\CNTKv2LibraryDll\API;$(SolutionDir)\Source\Readers\CNTKBinaryReader;$(SolutionDir)\Source\Readers\CNTKTextFormatReader;$(SolutionDir)Source\Common\Include;$(SolutionDir)Source\Math;$(SolutionDir)Source\Readers\ReaderLib;$(BOOST_INCLUDE_PATH)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir);$(BOOST_LIB_PATH)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>WIN32;$(ImageReaderDefine);$(ZipDefine);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UseFullPaths>true</UseFullPaths>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(ReaderLibs);Cntk.Reader.HTKMLF-$(CntkComponentVersion).lib;Cntk.Deserializers.HTK-$(CntkComponentVersion).lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(DebugBuild)">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(ReleaseBuild)">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/d2Zi+ %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(CpuOnlyBuild)">
+    <ClCompile>
+      <PreprocessorDefinitions>CPUONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\ReaderTestHelper.h" />
+    <ClInclude Include="SequentialDeserializer.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CNTKBinaryReaderTests.cpp" />
+    <ClCompile Include="CNTKTextFormatReaderTests.cpp" />
+    <ClCompile Include="HTKLMFReaderTests.cpp" />
+    <ClCompile Include="ImageReaderTests.cpp" />
+    <ClCompile Include="ReaderLibTests.cpp" />
+    <ClCompile Include="ReaderUtilTests.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Readers\CNTKTextFormatReader\TextParser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop10_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop11_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop12_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop13_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop14_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop16_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop17_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop19_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop1_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop20_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop21_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop22_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop2_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop3_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop4_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop5_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop6_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop7_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop8_Config.cntk" />
+    <Text Include="Config\HTKMLFReaderSimpleDataLoop9_Config.cntk" />
+    <Text Include="Config\ImageReaderSimple_Config.cntk" />
+    <Text Include="Config\UCIFastReaderSimpleDataLoop_Config.cntk" />
+    <Text Include="Control\CNTKBinaryReader\Simple_dense.txt" />
+    <Text Include="Control\CNTKBinaryReader\Simple_dense_312.txt" />
+    <Text Include="Control\CNTKBinaryReader\Simple_sparse.txt" />
+    <Text Include="Control\CNTKBinaryReader\Simple_sparse_seq.txt" />
+    <Text Include="Control\CNTKTextFormatReader\100x100x3_jagged_sequences_dense_sorted.txt" />
+    <Text Include="Control\CNTKTextFormatReader\100x1_1_dense.txt" />
+    <Text Include="Control\CNTKTextFormatReader\100x1_2_dense.txt" />
+    <Text Include="Control\CNTKTextFormatReader\10x1_MI_1_dense.txt" />
+    <Text Include="Control\CNTKTextFormatReader\10x1_MI_2_dense.txt" />
+    <Text Include="Control\CNTKTextFormatReader\1x1_1_dense.txt" />
+    <Text Include="Control\CNTKTextFormatReader\1x1_2_dense.txt" />
+    <Text Include="Control\CNTKTextFormatReader\1x1_sparse.txt" />
+    <Text Include="Control\CNTKTextFormatReader\200x200x2_seq2seq_dense_sorted.txt" />
+    <Text Include="Control\CNTKTextFormatReader\blank_lines.txt" />
+    <Text Include="Control\CNTKTextFormatReader\empty_samples.txt" />
+    <Text Include="Control\CNTKTextFormatReader\invalid_input_Control.txt" />
+    <Text Include="Control\CNTKTextFormatReader\ref_data_with_escape_sequences.txt" />
+    <Text Include="Control\CNTKTextFormatReader\space_separated.txt" />
+    <Text Include="Control\CNTKTextFormatReader\missing_trailing_newline.txt" />
+    <Text Include="Control\CNTKTextFormatReader\MNIST_dense.txt" />
+    <Text Include="Control\CNTKTextFormatReader\Simple_dense.txt" />
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop10_20_Control.txt" />
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop1_5_11_Control.txt" />
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop21_0_Control.txt" />
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop21_1_Control.txt" />
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop22_Control.txt" />
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop2_12_Control.txt" />
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop3_13_Control.txt" />
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop4_8_14_Control.txt" />
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop6_16_17_Control.txt" />
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop7_Control.txt" />
+    <Text Include="Control\HTKMLFReaderSimpleDataLoop9_19_Control.txt" />
+    <Text Include="Control\ImageReaderColorTransform_Control.txt" />
+    <Text Include="Control\ImageReaderGrayscale_Control.txt" />
+    <Text Include="Control\ImageReaderIntensityTransform_Control.txt" />
+    <Text Include="Control\ImageReaderMultiView_Control.txt" />
+    <Text Include="Control\ImageReaderSimple_Control.txt" />
+    <Text Include="Control\ImageReaderZip_Control.txt" />
+    <Text Include="Control\UCIFastReaderSimpleDataLoop_Control.txt" />
+    <Text Include="Data\CNTKTextFormatReader\100x100x3_jagged_sequences_dense.txt" />
+    <Text Include="Data\CNTKTextFormatReader\100x1_dense.txt" />
+    <Text Include="Data\CNTKTextFormatReader\10x1_MI_dense.txt" />
+    <Text Include="Data\CNTKTextFormatReader\1x1_dense.txt" />
+    <Text Include="Data\CNTKTextFormatReader\1x1_sparse.txt" />
+    <Text Include="Data\CNTKTextFormatReader\200x200x2_seq2seq_dense.txt" />
+    <Text Include="Data\CNTKTextFormatReader\5x10_and_5x5_jagged.txt" />
+    <Text Include="Data\CNTKTextFormatReader\5x10_jagged.txt" />
+    <Text Include="Data\CNTKTextFormatReader\5x5_jagged.txt" />
+    <Text Include="Data\CNTKTextFormatReader\contains_blank_lines.txt" />
+    <Text Include="Data\CNTKTextFormatReader\duplicate_inputs.txt" />
+    <Text Include="Data\CNTKTextFormatReader\empty_samples.txt" />
+    <Text Include="Data\CNTKTextFormatReader\invalid_input.txt" />
+    <Text Include="Data\CNTKTextFormatReader\ref_data_with_escape_sequences.txt" />
+    <Text Include="Data\CNTKTextFormatReader\space_separated.txt" />
+    <Text Include="Data\CNTKTextFormatReader\MNIST_dense.txt" />
+    <Text Include="Data\CNTKTextFormatReader\missing_trailing_newline.txt" />
+    <Text Include="Data\CNTKTextFormatReader\Simple_dense.txt" />
+    <Text Include="Data\ImageAndTextReaderSimple_labels.txt" />
+    <Text Include="Data\ImageAndTextReaderSimple_map.txt" />
+    <Text Include="Data\ImageReaderBadLabel_map.txt" />
+    <Text Include="Data\ImageReaderBadMap_map.txt" />
+    <Text Include="Data\ImageReaderGrayscale_map.txt" />
+    <Text Include="Data\ImageReaderLabelOutOfRange_map.txt" />
+    <Text Include="Data\ImageReaderMissingImage_map.txt" />
+    <Text Include="Data\ImageReaderMultiView_map.txt" />
+    <Text Include="Data\ImageReaderSimple_map.txt" />
+    <Text Include="Data\ImageReaderZip_map.txt" />
+    <Text Include="Data\UCIFastReaderSimpleDataLoop_Mapping.txt" />
+    <Text Include="Data\UCIFastReaderSimpleDataLoop_Train.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Data\images\black.jpg" />
+    <Image Include="Data\images\blue.jpg" />
+    <Image Include="Data\images\grayscale.png" />
+    <Image Include="Data\images\green.jpg" />
+    <Image Include="Data\images\multi.png" />
+    <Image Include="Data\images\red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\CNTKBinaryReader\test.cntk" />
+    <None Include="Config\CNTKTextFormatReader\dense.cntk" />
+    <None Include="Config\CNTKTextFormatReader\edge_cases.cntk" />
+    <None Include="Config\CNTKTextFormatReader\sparse.cntk" />
+    <None Include="Config\HTKDeserializersSimpleDataLoop10_Config.cntk" />
+    <None Include="Config\HTKDeserializersSimpleDataLoop11_Config.cntk" />
+    <None Include="Config\HTKDeserializersSimpleDataLoop14_Config.cntk" />
+    <None Include="Config\HTKDeserializersSimpleDataLoop19_Config.cntk" />
+    <None Include="Config\HTKDeserializersSimpleDataLoop1_Config.cntk" />
+    <None Include="Config\HTKDeserializersSimpleDataLoop20_Config.cntk" />
+    <None Include="Config\HTKDeserializersSimpleDataLoop21_Config.cntk" />
+    <None Include="Config\HTKDeserializersSimpleDataLoop3_Config.cntk" />
+    <None Include="Config\HTKDeserializersSimpleDataLoop4_Config.cntk" />
+    <None Include="Config\HTKDeserializersSimpleDataLoop5_Config.cntk" />
+    <None Include="Config\HTKDeserializersSimpleDataLoop8_Config.cntk" />
+    <None Include="Config\HTKDeserializersSimpleDataLoop9_Config.cntk" />
+    <None Include="Config\ImageAndTextReaderSimple_Config.cntk" />
+    <None Include="Config\ImageDeserializers.cntk" />
+    <None Include="Config\ImageTransforms_Config.cntk" />
+    <None Include="Config\ImageReaderBadLabel_Config.cntk" />
+    <None Include="Config\ImageReaderBadMap_Config.cntk" />
+    <None Include="Config\ImageReaderColorTransform_Config.cntk" />
+    <None Include="Config\ImageReaderGrayscale_Config.cntk" />
+    <None Include="Config\ImageReaderIntensityTransform_Config.cntk" />
+    <None Include="Config\ImageReaderLabelOutOfRange_Config.cntk" />
+    <None Include="Config\ImageReaderMultiView_Config.cntk" />
+    <None Include="Config\ImageReaderZip_Config.cntk" />
+    <None Include="Data\CNTKBinaryReader\simple.bin" />
+    <None Include="Data\CNTKBinaryReader\sparseoutput.bin" />
+    <None Include="Data\CNTKBinaryReader\sparseseqoutput.bin" />
+    <None Include="Data\images\chunk0.zip" />
+    <None Include="Data\images\chunk1.zip" />
+    <None Include="Data\images\simple.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Data\ImageNet1K_intensity.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Target Name="Build" Condition="$(HasBoost)" Outputs="$(TargetPath)" DependsOnTargets="$(BuildDependsOn)" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="CheckDependencies">
+    <Error Condition="!$(HasBoost)" Text="ReaderTests requires the Boost library to build. Please see https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Windows#boost for installation instructions." />
+  </Target>
+</Project>

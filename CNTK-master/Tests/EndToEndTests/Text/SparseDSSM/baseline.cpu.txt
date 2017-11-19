@@ -1,0 +1,961 @@
+CPU info:
+    CPU Model Name: Intel(R) Xeon(R) CPU W3530 @ 2.80GHz
+    Hardware threads: 4
+    Total Memory: 12580404 kB
+-------------------------------------------------------------------
+=== Running C:\Program Files\Microsoft MPI\Bin\/mpiexec.exe -n 4 C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu DeviceId=-1 timestamping=true numCPUThreads=1 stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:32:49
+
+C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+Changed current directory to C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData
+requestnodes [MPIWrapper]: using 4 out of 4 MPI nodes on a single host (4 requested); we (0) are in (participating)
+CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:32:49
+
+C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+Changed current directory to C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData
+requestnodes [MPIWrapper]: using 4 out of 4 MPI nodes on a single host (4 requested); we (1) are in (participating)
+CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:32:49
+
+C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+Changed current directory to C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData
+requestnodes [MPIWrapper]: using 4 out of 4 MPI nodes on a single host (4 requested); we (2) are in (participating)
+CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:32:49
+
+C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+Changed current directory to C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData
+requestnodes [MPIWrapper]: using 4 out of 4 MPI nodes on a single host (4 requested); we (3) are in (participating)
+MPI Rank 0: 12/15/2016 08:32:49: Redirecting stderr to file C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr_train.logrank0
+MPI Rank 0: CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:32:49
+MPI Rank 0: 
+MPI Rank 0: C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+MPI Rank 0: 12/15/2016 08:32:49: Using 1 CPU threads.
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:32:49: ##############################################################################
+MPI Rank 0: 12/15/2016 08:32:49: #                                                                            #
+MPI Rank 0: 12/15/2016 08:32:49: # train command (train action)                                               #
+MPI Rank 0: 12/15/2016 08:32:49: #                                                                            #
+MPI Rank 0: 12/15/2016 08:32:49: ##############################################################################
+MPI Rank 0: 
+MPI Rank 0: WARNING: option syncFrequencyInFrames in ModelAveragingSGD is going to be deprecated. Please use blockSizePerWorker instead
+MPI Rank 0: 12/15/2016 08:32:49: 
+MPI Rank 0: Creating virgin network.
+MPI Rank 0: NDLBuilder Using CPU
+MPI Rank 0: 12/15/2016 08:32:50: 
+MPI Rank 0: Model has 21 nodes. Using CPU.
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:32:50: Training criterion:   ce = CrossEntropyWithSoftmax
+MPI Rank 0: 
+MPI Rank 0: 
+MPI Rank 0: Allocating matrices for forward and/or backward propagation.
+MPI Rank 0: 
+MPI Rank 0: Memory Sharing: Out of 36 matrices, 16 are shared as 7, and 20 are not shared.
+MPI Rank 0: 
+MPI Rank 0: 	{ SIM_Scale : [51 x 1 x *]
+MPI Rank 0: 	  WQ0_Q_Tanh : [288 x *] (gradient)
+MPI Rank 0: 	  WQ1_Q_Tanh : [64 x *] (gradient) }
+MPI Rank 0: 	{ WD1 : [64 x 288] (gradient)
+MPI Rank 0: 	  WD1_D_Tanh : [64 x *] }
+MPI Rank 0: 	{ SIM_Scale : [51 x 1 x *] (gradient)
+MPI Rank 0: 	  WD0_D_Tanh : [288 x *] (gradient)
+MPI Rank 0: 	  WD1_D_Tanh : [64 x *] (gradient) }
+MPI Rank 0: 	{ WD0_D : [288 x *]
+MPI Rank 0: 	  WQ1_Q : [64 x *] (gradient) }
+MPI Rank 0: 	{ WQ0_Q : [288 x *] (gradient)
+MPI Rank 0: 	  WQ1_Q : [64 x *] }
+MPI Rank 0: 	{ WD0_D : [288 x *] (gradient)
+MPI Rank 0: 	  WD1_D : [64 x *] }
+MPI Rank 0: 	{ WQ1 : [64 x 288] (gradient)
+MPI Rank 0: 	  WQ1_Q_Tanh : [64 x *] }
+MPI Rank 0: 
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:32:50: Training 28429056 parameters in 4 out of 4 parameter tensors and 15 nodes with gradient:
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:32:50: 	Node 'WD0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 0: 12/15/2016 08:32:50: 	Node 'WD1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 0: 12/15/2016 08:32:50: 	Node 'WQ0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 0: 12/15/2016 08:32:50: 	Node 'WQ1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 0: 
+MPI Rank 0: Parallel training (4 workers) using ModelAveraging
+MPI Rank 0: 12/15/2016 08:32:50: No PreCompute nodes found, or all already computed. Skipping pre-computation step.
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:32:53: Starting Epoch 1: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:32:53: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 0: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.12-seconds latency this time; accumulated time on sync point = 0.12 seconds , average latency = 0.12 seconds
+MPI Rank 0: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.12 seconds , average latency = 0.06 seconds
+MPI Rank 0: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.09-seconds latency this time; accumulated time on sync point = 0.21 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.21 seconds , average latency = 0.05 seconds
+MPI Rank 0: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.21 seconds , average latency = 0.04 seconds
+MPI Rank 0: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.39 seconds , average latency = 0.06 seconds
+MPI Rank 0: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 0.50 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.60 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.60 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 0.70 seconds , average latency = 0.07 seconds
+MPI Rank 0: 12/15/2016 08:33:04:  Epoch[ 1 of 3]-Minibatch[   1-  10, 40.00%]: ce = 4.37112236 * 10240; time = 10.8873s; samplesPerSecond = 940.5
+MPI Rank 0: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.06-seconds latency this time; accumulated time on sync point = 0.77 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.77 seconds , average latency = 0.06 seconds
+MPI Rank 0: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 0.87 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.05 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.05 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.06-seconds latency this time; accumulated time on sync point = 1.11 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 1.28 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.28 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 1.45 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.15-seconds latency this time; accumulated time on sync point = 1.60 seconds , average latency = 0.08 seconds
+MPI Rank 0: 12/15/2016 08:33:14:  Epoch[ 1 of 3]-Minibatch[  11-  20, 80.00%]: ce = 3.40576515 * 10240; time = 10.8812s; samplesPerSecond = 941.1
+MPI Rank 0: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.08-seconds latency this time; accumulated time on sync point = 1.68 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.68 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 1.84 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.02-seconds latency this time; accumulated time on sync point = 1.86 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.86 seconds , average latency = 0.07 seconds
+MPI Rank 0: 12/15/2016 08:33:20: Finished Epoch[ 1 of 3]: [Training] ce = 3.67212647 * 102399; totalSamplesSeen = 102399; learningRatePerSample = 9.9999997e-005; epochTime=27.5554s
+MPI Rank 0: 12/15/2016 08:33:23: Final Results: Minibatch[1-26]: ce = 2.50345778 * 102399; perplexity = 12.22469126
+MPI Rank 0: 12/15/2016 08:33:23: Finished Epoch[ 1 of 3]: [Validate] ce = 2.50345778 * 102399
+MPI Rank 0: 12/15/2016 08:33:25: SGD: Saving checkpoint model 'C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/Models/dssm.net.1'
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:33:26: Starting Epoch 2: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:33:26: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 0: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.15-seconds latency this time; accumulated time on sync point = 0.15 seconds , average latency = 0.15 seconds
+MPI Rank 0: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.06-seconds latency this time; accumulated time on sync point = 0.21 seconds , average latency = 0.11 seconds
+MPI Rank 0: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.22 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.22 seconds , average latency = 0.05 seconds
+MPI Rank 0: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.22 seconds , average latency = 0.04 seconds
+MPI Rank 0: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.22 seconds , average latency = 0.04 seconds
+MPI Rank 0: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 0.38 seconds , average latency = 0.05 seconds
+MPI Rank 0: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 0.50 seconds , average latency = 0.06 seconds
+MPI Rank 0: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 0.66 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 0.82 seconds , average latency = 0.08 seconds
+MPI Rank 0: 12/15/2016 08:33:37:  Epoch[ 2 of 3]-Minibatch[   1-  10, 40.00%]: ce = 2.28291130 * 10240; time = 10.6181s; samplesPerSecond = 964.4
+MPI Rank 0: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 0.99 seconds , average latency = 0.09 seconds
+MPI Rank 0: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.07-seconds latency this time; accumulated time on sync point = 1.06 seconds , average latency = 0.09 seconds
+MPI Rank 0: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.06 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.12-seconds latency this time; accumulated time on sync point = 1.17 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.28 seconds , average latency = 0.09 seconds
+MPI Rank 0: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 1.39 seconds , average latency = 0.09 seconds
+MPI Rank 0: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.15-seconds latency this time; accumulated time on sync point = 1.54 seconds , average latency = 0.09 seconds
+MPI Rank 0: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.07-seconds latency this time; accumulated time on sync point = 1.61 seconds , average latency = 0.09 seconds
+MPI Rank 0: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.79 seconds , average latency = 0.09 seconds
+MPI Rank 0: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.89 seconds , average latency = 0.09 seconds
+MPI Rank 0: 12/15/2016 08:33:47:  Epoch[ 2 of 3]-Minibatch[  11-  20, 80.00%]: ce = 2.09267235 * 10240; time = 10.4342s; samplesPerSecond = 981.4
+MPI Rank 0: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 2.00 seconds , average latency = 0.10 seconds
+MPI Rank 0: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 2.11 seconds , average latency = 0.10 seconds
+MPI Rank 0: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 2.29 seconds , average latency = 0.10 seconds
+MPI Rank 0: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 2.39 seconds , average latency = 0.10 seconds
+MPI Rank 0: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 2.40 seconds , average latency = 0.10 seconds
+MPI Rank 0: 12/15/2016 08:33:52: Finished Epoch[ 2 of 3]: [Training] ce = 2.16978891 * 102399; totalSamplesSeen = 204798; learningRatePerSample = 9.9999997e-005; epochTime=26.1272s
+MPI Rank 0: 12/15/2016 08:33:55: Final Results: Minibatch[1-26]: ce = 1.96700289 * 102399; perplexity = 7.14921735
+MPI Rank 0: 12/15/2016 08:33:55: Finished Epoch[ 2 of 3]: [Validate] ce = 1.96700289 * 102399
+MPI Rank 0: 12/15/2016 08:33:56: SGD: Saving checkpoint model 'C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/Models/dssm.net.2'
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:33:57: Starting Epoch 3: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:33:57: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 0: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.02-seconds latency this time; accumulated time on sync point = 0.02 seconds , average latency = 0.02 seconds
+MPI Rank 0: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.13 seconds , average latency = 0.06 seconds
+MPI Rank 0: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.01-seconds latency this time; accumulated time on sync point = 0.13 seconds , average latency = 0.04 seconds
+MPI Rank 0: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 0.30 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.30 seconds , average latency = 0.06 seconds
+MPI Rank 0: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.30 seconds , average latency = 0.05 seconds
+MPI Rank 0: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.48 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.15-seconds latency this time; accumulated time on sync point = 0.63 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.63 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.63 seconds , average latency = 0.06 seconds
+MPI Rank 0: 12/15/2016 08:34:07:  Epoch[ 3 of 3]-Minibatch[   1-  10, 40.00%]: ce = 1.90168724 * 10240; time = 10.0406s; samplesPerSecond = 1019.9
+MPI Rank 0: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.07-seconds latency this time; accumulated time on sync point = 0.70 seconds , average latency = 0.06 seconds
+MPI Rank 0: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.88 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.06-seconds latency this time; accumulated time on sync point = 0.94 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 1.11 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.11 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.11 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.29 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.07-seconds latency this time; accumulated time on sync point = 1.36 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.54 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.54 seconds , average latency = 0.08 seconds
+MPI Rank 0: 12/15/2016 08:34:18:  Epoch[ 3 of 3]-Minibatch[  11-  20, 80.00%]: ce = 1.87112122 * 10240; time = 10.3273s; samplesPerSecond = 991.5
+MPI Rank 0: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 1.71 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.71 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.89 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.15-seconds latency this time; accumulated time on sync point = 2.04 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 2.04 seconds , average latency = 0.08 seconds
+MPI Rank 0: 12/15/2016 08:34:23: Finished Epoch[ 3 of 3]: [Training] ce = 1.88560946 * 102399; totalSamplesSeen = 307197; learningRatePerSample = 9.9999997e-005; epochTime=25.7082s
+MPI Rank 0: 12/15/2016 08:34:26: Final Results: Minibatch[1-26]: ce = 1.80966212 * 102399; perplexity = 6.10838318
+MPI Rank 0: 12/15/2016 08:34:26: Finished Epoch[ 3 of 3]: [Validate] ce = 1.80966212 * 102399
+MPI Rank 0: 12/15/2016 08:34:27: SGD: Saving checkpoint model 'C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/Models/dssm.net'
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:34:28: Action "train" complete.
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:34:28: __COMPLETED__
+MPI Rank 1: 12/15/2016 08:32:49: Redirecting stderr to file C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr_train.logrank1
+MPI Rank 1: CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:32:49
+MPI Rank 1: 
+MPI Rank 1: C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+MPI Rank 1: 12/15/2016 08:32:49: Using 1 CPU threads.
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:32:49: ##############################################################################
+MPI Rank 1: 12/15/2016 08:32:49: #                                                                            #
+MPI Rank 1: 12/15/2016 08:32:49: # train command (train action)                                               #
+MPI Rank 1: 12/15/2016 08:32:49: #                                                                            #
+MPI Rank 1: 12/15/2016 08:32:49: ##############################################################################
+MPI Rank 1: 
+MPI Rank 1: WARNING: option syncFrequencyInFrames in ModelAveragingSGD is going to be deprecated. Please use blockSizePerWorker instead
+MPI Rank 1: 12/15/2016 08:32:49: 
+MPI Rank 1: Creating virgin network.
+MPI Rank 1: NDLBuilder Using CPU
+MPI Rank 1: 12/15/2016 08:32:50: 
+MPI Rank 1: Model has 21 nodes. Using CPU.
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:32:50: Training criterion:   ce = CrossEntropyWithSoftmax
+MPI Rank 1: 
+MPI Rank 1: 
+MPI Rank 1: Allocating matrices for forward and/or backward propagation.
+MPI Rank 1: 
+MPI Rank 1: Memory Sharing: Out of 36 matrices, 16 are shared as 7, and 20 are not shared.
+MPI Rank 1: 
+MPI Rank 1: 	{ WQ0_Q : [288 x *] (gradient)
+MPI Rank 1: 	  WQ1_Q : [64 x *] }
+MPI Rank 1: 	{ WD1 : [64 x 288] (gradient)
+MPI Rank 1: 	  WD1_D_Tanh : [64 x *] }
+MPI Rank 1: 	{ WD0_D : [288 x *] (gradient)
+MPI Rank 1: 	  WD1_D : [64 x *] }
+MPI Rank 1: 	{ SIM_Scale : [51 x 1 x *] (gradient)
+MPI Rank 1: 	  WD0_D_Tanh : [288 x *] (gradient)
+MPI Rank 1: 	  WD1_D_Tanh : [64 x *] (gradient) }
+MPI Rank 1: 	{ WQ1 : [64 x 288] (gradient)
+MPI Rank 1: 	  WQ1_Q_Tanh : [64 x *] }
+MPI Rank 1: 	{ WD0_D : [288 x *]
+MPI Rank 1: 	  WQ1_Q : [64 x *] (gradient) }
+MPI Rank 1: 	{ SIM_Scale : [51 x 1 x *]
+MPI Rank 1: 	  WQ0_Q_Tanh : [288 x *] (gradient)
+MPI Rank 1: 	  WQ1_Q_Tanh : [64 x *] (gradient) }
+MPI Rank 1: 
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:32:50: Training 28429056 parameters in 4 out of 4 parameter tensors and 15 nodes with gradient:
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:32:50: 	Node 'WD0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 1: 12/15/2016 08:32:50: 	Node 'WD1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 1: 12/15/2016 08:32:50: 	Node 'WQ0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 1: 12/15/2016 08:32:50: 	Node 'WQ1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 1: 
+MPI Rank 1: Parallel training (4 workers) using ModelAveraging
+MPI Rank 1: 12/15/2016 08:32:50: No PreCompute nodes found, or all already computed. Skipping pre-computation step.
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:32:53: Starting Epoch 1: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:32:53: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 1: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 0.11 seconds , average latency = 0.11 seconds
+MPI Rank 1: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 0.30 seconds , average latency = 0.15 seconds
+MPI Rank 1: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 0.49 seconds , average latency = 0.16 seconds
+MPI Rank 1: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.59 seconds , average latency = 0.15 seconds
+MPI Rank 1: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 0.79 seconds , average latency = 0.16 seconds
+MPI Rank 1: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.79 seconds , average latency = 0.13 seconds
+MPI Rank 1: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.04-seconds latency this time; accumulated time on sync point = 0.83 seconds , average latency = 0.12 seconds
+MPI Rank 1: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.83 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.04-seconds latency this time; accumulated time on sync point = 0.87 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.97 seconds , average latency = 0.10 seconds
+MPI Rank 1: 12/15/2016 08:33:04:  Epoch[ 1 of 3]-Minibatch[   1-  10, 40.00%]: ce = 4.42099991 * 10240; time = 10.9447s; samplesPerSecond = 935.6
+MPI Rank 1: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 1.14 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.24 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 1.35 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.35 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.45 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 1.62 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.62 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.09-seconds latency this time; accumulated time on sync point = 1.71 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.89 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 2.07 seconds , average latency = 0.10 seconds
+MPI Rank 1: 12/15/2016 08:33:14:  Epoch[ 1 of 3]-Minibatch[  11-  20, 80.00%]: ce = 3.40744781 * 10240; time = 10.8844s; samplesPerSecond = 940.8
+MPI Rank 1: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 2.07 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 2.26 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 2.45 seconds , average latency = 0.11 seconds
+MPI Rank 1: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 2.45 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 2.45 seconds , average latency = 0.10 seconds
+MPI Rank 1: 12/15/2016 08:33:20: Finished Epoch[ 1 of 3]: [Training] ce = 3.67212647 * 102399; totalSamplesSeen = 102399; learningRatePerSample = 9.9999997e-005; epochTime=27.5569s
+MPI Rank 1: 12/15/2016 08:33:23: Final Results: Minibatch[1-26]: ce = 2.50345778 * 102399; perplexity = 12.22469126
+MPI Rank 1: 12/15/2016 08:33:23: Finished Epoch[ 1 of 3]: [Validate] ce = 2.50345778 * 102399
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:33:26: Starting Epoch 2: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:33:26: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 1: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 0.19 seconds , average latency = 0.19 seconds
+MPI Rank 1: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 0.35 seconds , average latency = 0.18 seconds
+MPI Rank 1: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.35 seconds , average latency = 0.12 seconds
+MPI Rank 1: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.36 seconds , average latency = 0.09 seconds
+MPI Rank 1: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 0.54 seconds , average latency = 0.11 seconds
+MPI Rank 1: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.72 seconds , average latency = 0.12 seconds
+MPI Rank 1: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 0.89 seconds , average latency = 0.13 seconds
+MPI Rank 1: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 1.00 seconds , average latency = 0.12 seconds
+MPI Rank 1: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 1.16 seconds , average latency = 0.13 seconds
+MPI Rank 1: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.26 seconds , average latency = 0.13 seconds
+MPI Rank 1: 12/15/2016 08:33:37:  Epoch[ 2 of 3]-Minibatch[   1-  10, 40.00%]: ce = 2.32150917 * 10240; time = 10.6219s; samplesPerSecond = 964.0
+MPI Rank 1: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.36 seconds , average latency = 0.12 seconds
+MPI Rank 1: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.36 seconds , average latency = 0.11 seconds
+MPI Rank 1: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 1.47 seconds , average latency = 0.11 seconds
+MPI Rank 1: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.47 seconds , average latency = 0.11 seconds
+MPI Rank 1: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.47 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 1.59 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.01-seconds latency this time; accumulated time on sync point = 1.59 seconds , average latency = 0.09 seconds
+MPI Rank 1: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.59 seconds , average latency = 0.09 seconds
+MPI Rank 1: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.77 seconds , average latency = 0.09 seconds
+MPI Rank 1: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.15-seconds latency this time; accumulated time on sync point = 1.93 seconds , average latency = 0.10 seconds
+MPI Rank 1: 12/15/2016 08:33:47:  Epoch[ 2 of 3]-Minibatch[  11-  20, 80.00%]: ce = 2.10282593 * 10240; time = 10.4343s; samplesPerSecond = 981.4
+MPI Rank 1: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.93 seconds , average latency = 0.09 seconds
+MPI Rank 1: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.93 seconds , average latency = 0.09 seconds
+MPI Rank 1: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 2.11 seconds , average latency = 0.09 seconds
+MPI Rank 1: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 2.21 seconds , average latency = 0.09 seconds
+MPI Rank 1: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 2.22 seconds , average latency = 0.09 seconds
+MPI Rank 1: 12/15/2016 08:33:52: Finished Epoch[ 2 of 3]: [Training] ce = 2.16978891 * 102399; totalSamplesSeen = 204798; learningRatePerSample = 9.9999997e-005; epochTime=26.1267s
+MPI Rank 1: 12/15/2016 08:33:55: Final Results: Minibatch[1-26]: ce = 1.96700289 * 102399; perplexity = 7.14921735
+MPI Rank 1: 12/15/2016 08:33:55: Finished Epoch[ 2 of 3]: [Validate] ce = 1.96700289 * 102399
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:33:57: Starting Epoch 3: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:33:57: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 1: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.04-seconds latency this time; accumulated time on sync point = 0.04 seconds , average latency = 0.04 seconds
+MPI Rank 1: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.04 seconds , average latency = 0.02 seconds
+MPI Rank 1: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.04 seconds , average latency = 0.01 seconds
+MPI Rank 1: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 0.21 seconds , average latency = 0.05 seconds
+MPI Rank 1: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 0.40 seconds , average latency = 0.08 seconds
+MPI Rank 1: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.40 seconds , average latency = 0.07 seconds
+MPI Rank 1: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 0.51 seconds , average latency = 0.07 seconds
+MPI Rank 1: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.12-seconds latency this time; accumulated time on sync point = 0.63 seconds , average latency = 0.08 seconds
+MPI Rank 1: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.63 seconds , average latency = 0.07 seconds
+MPI Rank 1: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.63 seconds , average latency = 0.06 seconds
+MPI Rank 1: 12/15/2016 08:34:07:  Epoch[ 3 of 3]-Minibatch[   1-  10, 40.00%]: ce = 1.92540989 * 10240; time = 10.0366s; samplesPerSecond = 1020.3
+MPI Rank 1: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.64 seconds , average latency = 0.06 seconds
+MPI Rank 1: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.64 seconds , average latency = 0.05 seconds
+MPI Rank 1: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.64 seconds , average latency = 0.05 seconds
+MPI Rank 1: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.64 seconds , average latency = 0.05 seconds
+MPI Rank 1: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 0.83 seconds , average latency = 0.06 seconds
+MPI Rank 1: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.83 seconds , average latency = 0.05 seconds
+MPI Rank 1: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.01 seconds , average latency = 0.06 seconds
+MPI Rank 1: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.01 seconds , average latency = 0.06 seconds
+MPI Rank 1: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.01 seconds , average latency = 0.05 seconds
+MPI Rank 1: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.01 seconds , average latency = 0.05 seconds
+MPI Rank 1: 12/15/2016 08:34:18:  Epoch[ 3 of 3]-Minibatch[  11-  20, 80.00%]: ce = 1.87084942 * 10240; time = 10.3227s; samplesPerSecond = 992.0
+MPI Rank 1: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.11 seconds , average latency = 0.05 seconds
+MPI Rank 1: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.11 seconds , average latency = 0.05 seconds
+MPI Rank 1: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 1.30 seconds , average latency = 0.06 seconds
+MPI Rank 1: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.03-seconds latency this time; accumulated time on sync point = 1.33 seconds , average latency = 0.06 seconds
+MPI Rank 1: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.33 seconds , average latency = 0.05 seconds
+MPI Rank 1: 12/15/2016 08:34:23: Finished Epoch[ 3 of 3]: [Training] ce = 1.88560946 * 102399; totalSamplesSeen = 307197; learningRatePerSample = 9.9999997e-005; epochTime=25.7078s
+MPI Rank 1: 12/15/2016 08:34:26: Final Results: Minibatch[1-26]: ce = 1.80966212 * 102399; perplexity = 6.10838318
+MPI Rank 1: 12/15/2016 08:34:26: Finished Epoch[ 3 of 3]: [Validate] ce = 1.80966212 * 102399
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:34:28: Action "train" complete.
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:34:28: __COMPLETED__
+MPI Rank 2: 12/15/2016 08:32:50: Redirecting stderr to file C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr_train.logrank2
+MPI Rank 2: CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:32:49
+MPI Rank 2: 
+MPI Rank 2: C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+MPI Rank 2: 12/15/2016 08:32:50: Using 1 CPU threads.
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:32:50: ##############################################################################
+MPI Rank 2: 12/15/2016 08:32:50: #                                                                            #
+MPI Rank 2: 12/15/2016 08:32:50: # train command (train action)                                               #
+MPI Rank 2: 12/15/2016 08:32:50: #                                                                            #
+MPI Rank 2: 12/15/2016 08:32:50: ##############################################################################
+MPI Rank 2: 
+MPI Rank 2: WARNING: option syncFrequencyInFrames in ModelAveragingSGD is going to be deprecated. Please use blockSizePerWorker instead
+MPI Rank 2: 12/15/2016 08:32:50: 
+MPI Rank 2: Creating virgin network.
+MPI Rank 2: NDLBuilder Using CPU
+MPI Rank 2: 12/15/2016 08:32:51: 
+MPI Rank 2: Model has 21 nodes. Using CPU.
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:32:51: Training criterion:   ce = CrossEntropyWithSoftmax
+MPI Rank 2: 
+MPI Rank 2: 
+MPI Rank 2: Allocating matrices for forward and/or backward propagation.
+MPI Rank 2: 
+MPI Rank 2: Memory Sharing: Out of 36 matrices, 16 are shared as 7, and 20 are not shared.
+MPI Rank 2: 
+MPI Rank 2: 	{ WD0_D : [288 x *]
+MPI Rank 2: 	  WQ1_Q : [64 x *] (gradient) }
+MPI Rank 2: 	{ SIM_Scale : [51 x 1 x *]
+MPI Rank 2: 	  WQ0_Q_Tanh : [288 x *] (gradient)
+MPI Rank 2: 	  WQ1_Q_Tanh : [64 x *] (gradient) }
+MPI Rank 2: 	{ SIM_Scale : [51 x 1 x *] (gradient)
+MPI Rank 2: 	  WD0_D_Tanh : [288 x *] (gradient)
+MPI Rank 2: 	  WD1_D_Tanh : [64 x *] (gradient) }
+MPI Rank 2: 	{ WD1 : [64 x 288] (gradient)
+MPI Rank 2: 	  WD1_D_Tanh : [64 x *] }
+MPI Rank 2: 	{ WQ0_Q : [288 x *] (gradient)
+MPI Rank 2: 	  WQ1_Q : [64 x *] }
+MPI Rank 2: 	{ WQ1 : [64 x 288] (gradient)
+MPI Rank 2: 	  WQ1_Q_Tanh : [64 x *] }
+MPI Rank 2: 	{ WD0_D : [288 x *] (gradient)
+MPI Rank 2: 	  WD1_D : [64 x *] }
+MPI Rank 2: 
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:32:51: Training 28429056 parameters in 4 out of 4 parameter tensors and 15 nodes with gradient:
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:32:51: 	Node 'WD0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 2: 12/15/2016 08:32:51: 	Node 'WD1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 2: 12/15/2016 08:32:51: 	Node 'WQ0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 2: 12/15/2016 08:32:51: 	Node 'WQ1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 2: 
+MPI Rank 2: Parallel training (4 workers) using ModelAveraging
+MPI Rank 2: 12/15/2016 08:32:51: No PreCompute nodes found, or all already computed. Skipping pre-computation step.
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:32:53: Starting Epoch 1: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:32:53: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 2: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.00 seconds , average latency = 0.00 seconds
+MPI Rank 2: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.20-seconds latency this time; accumulated time on sync point = 0.20 seconds , average latency = 0.10 seconds
+MPI Rank 2: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.20 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.30 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.09-seconds latency this time; accumulated time on sync point = 0.39 seconds , average latency = 0.08 seconds
+MPI Rank 2: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.57 seconds , average latency = 0.10 seconds
+MPI Rank 2: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.57 seconds , average latency = 0.08 seconds
+MPI Rank 2: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.67 seconds , average latency = 0.08 seconds
+MPI Rank 2: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 0.78 seconds , average latency = 0.09 seconds
+MPI Rank 2: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.78 seconds , average latency = 0.08 seconds
+MPI Rank 2: 12/15/2016 08:33:04:  Epoch[ 1 of 3]-Minibatch[   1-  10, 40.00%]: ce = 4.41016273 * 10240; time = 10.9446s; samplesPerSecond = 935.6
+MPI Rank 2: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.78 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.88 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.88 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.07-seconds latency this time; accumulated time on sync point = 0.96 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.06 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.06 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 1.23 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.07-seconds latency this time; accumulated time on sync point = 1.29 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.29 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.29 seconds , average latency = 0.06 seconds
+MPI Rank 2: 12/15/2016 08:33:14:  Epoch[ 1 of 3]-Minibatch[  11-  20, 80.00%]: ce = 3.39293404 * 10240; time = 10.8139s; samplesPerSecond = 946.9
+MPI Rank 2: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.29 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.09-seconds latency this time; accumulated time on sync point = 1.39 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.08-seconds latency this time; accumulated time on sync point = 1.47 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.04-seconds latency this time; accumulated time on sync point = 1.50 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.51 seconds , average latency = 0.06 seconds
+MPI Rank 2: 12/15/2016 08:33:20: Finished Epoch[ 1 of 3]: [Training] ce = 3.67212647 * 102399; totalSamplesSeen = 102399; learningRatePerSample = 9.9999997e-005; epochTime=27.5558s
+MPI Rank 2: 12/15/2016 08:33:23: Final Results: Minibatch[1-26]: ce = 2.50345778 * 102399; perplexity = 12.22469126
+MPI Rank 2: 12/15/2016 08:33:23: Finished Epoch[ 1 of 3]: [Validate] ce = 2.50345778 * 102399
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:33:26: Starting Epoch 2: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:33:26: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 2: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.05-seconds latency this time; accumulated time on sync point = 0.05 seconds , average latency = 0.05 seconds
+MPI Rank 2: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.05 seconds , average latency = 0.03 seconds
+MPI Rank 2: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.01-seconds latency this time; accumulated time on sync point = 0.06 seconds , average latency = 0.02 seconds
+MPI Rank 2: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.06 seconds , average latency = 0.01 seconds
+MPI Rank 2: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.23 seconds , average latency = 0.05 seconds
+MPI Rank 2: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.42 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.52 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.52 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.52 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.62 seconds , average latency = 0.06 seconds
+MPI Rank 2: 12/15/2016 08:33:37:  Epoch[ 2 of 3]-Minibatch[   1-  10, 40.00%]: ce = 2.32920132 * 10240; time = 10.5998s; samplesPerSecond = 966.1
+MPI Rank 2: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 0.79 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 0.96 seconds , average latency = 0.08 seconds
+MPI Rank 2: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.07 seconds , average latency = 0.08 seconds
+MPI Rank 2: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.02-seconds latency this time; accumulated time on sync point = 1.08 seconds , average latency = 0.08 seconds
+MPI Rank 2: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.19 seconds , average latency = 0.08 seconds
+MPI Rank 2: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.19 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.15-seconds latency this time; accumulated time on sync point = 1.34 seconds , average latency = 0.08 seconds
+MPI Rank 2: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.07-seconds latency this time; accumulated time on sync point = 1.41 seconds , average latency = 0.08 seconds
+MPI Rank 2: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.41 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.41 seconds , average latency = 0.07 seconds
+MPI Rank 2: 12/15/2016 08:33:47:  Epoch[ 2 of 3]-Minibatch[  11-  20, 80.00%]: ce = 2.10177746 * 10240; time = 10.4342s; samplesPerSecond = 981.4
+MPI Rank 2: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 1.52 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 1.63 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.07-seconds latency this time; accumulated time on sync point = 1.71 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.71 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.71 seconds , average latency = 0.07 seconds
+MPI Rank 2: 12/15/2016 08:33:52: Finished Epoch[ 2 of 3]: [Training] ce = 2.16978891 * 102399; totalSamplesSeen = 204798; learningRatePerSample = 9.9999997e-005; epochTime=26.1249s
+MPI Rank 2: 12/15/2016 08:33:55: Final Results: Minibatch[1-26]: ce = 1.96700289 * 102399; perplexity = 7.14921735
+MPI Rank 2: 12/15/2016 08:33:55: Finished Epoch[ 2 of 3]: [Validate] ce = 1.96700289 * 102399
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:33:57: Starting Epoch 3: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:33:57: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 2: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.00 seconds , average latency = 0.00 seconds
+MPI Rank 2: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.10 seconds , average latency = 0.05 seconds
+MPI Rank 2: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.01-seconds latency this time; accumulated time on sync point = 0.11 seconds , average latency = 0.04 seconds
+MPI Rank 2: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 0.28 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 0.47 seconds , average latency = 0.09 seconds
+MPI Rank 2: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.47 seconds , average latency = 0.08 seconds
+MPI Rank 2: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.47 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.15-seconds latency this time; accumulated time on sync point = 0.62 seconds , average latency = 0.08 seconds
+MPI Rank 2: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.63 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.63 seconds , average latency = 0.06 seconds
+MPI Rank 2: 12/15/2016 08:34:07:  Epoch[ 3 of 3]-Minibatch[   1-  10, 40.00%]: ce = 1.94673653 * 10240; time = 10.0466s; samplesPerSecond = 1019.2
+MPI Rank 2: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.07-seconds latency this time; accumulated time on sync point = 0.70 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.88 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.06-seconds latency this time; accumulated time on sync point = 0.94 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 1.10 seconds , average latency = 0.08 seconds
+MPI Rank 2: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 1.29 seconds , average latency = 0.09 seconds
+MPI Rank 2: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.47 seconds , average latency = 0.09 seconds
+MPI Rank 2: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.65 seconds , average latency = 0.10 seconds
+MPI Rank 2: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.65 seconds , average latency = 0.09 seconds
+MPI Rank 2: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.82 seconds , average latency = 0.10 seconds
+MPI Rank 2: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.06-seconds latency this time; accumulated time on sync point = 1.89 seconds , average latency = 0.09 seconds
+MPI Rank 2: 12/15/2016 08:34:18:  Epoch[ 3 of 3]-Minibatch[  11-  20, 80.00%]: ce = 1.87208824 * 10240; time = 10.3274s; samplesPerSecond = 991.5
+MPI Rank 2: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.89 seconds , average latency = 0.09 seconds
+MPI Rank 2: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 2.05 seconds , average latency = 0.09 seconds
+MPI Rank 2: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 2.24 seconds , average latency = 0.10 seconds
+MPI Rank 2: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.13-seconds latency this time; accumulated time on sync point = 2.36 seconds , average latency = 0.10 seconds
+MPI Rank 2: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 2.37 seconds , average latency = 0.09 seconds
+MPI Rank 2: 12/15/2016 08:34:23: Finished Epoch[ 3 of 3]: [Training] ce = 1.88560946 * 102399; totalSamplesSeen = 307197; learningRatePerSample = 9.9999997e-005; epochTime=25.7066s
+MPI Rank 2: 12/15/2016 08:34:26: Final Results: Minibatch[1-26]: ce = 1.80966212 * 102399; perplexity = 6.10838318
+MPI Rank 2: 12/15/2016 08:34:26: Finished Epoch[ 3 of 3]: [Validate] ce = 1.80966212 * 102399
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:34:28: Action "train" complete.
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:34:28: __COMPLETED__
+MPI Rank 3: 12/15/2016 08:32:50: Redirecting stderr to file C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr_train.logrank3
+MPI Rank 3: CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:32:49
+MPI Rank 3: 
+MPI Rank 3: C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+MPI Rank 3: 12/15/2016 08:32:50: Using 1 CPU threads.
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:32:50: ##############################################################################
+MPI Rank 3: 12/15/2016 08:32:50: #                                                                            #
+MPI Rank 3: 12/15/2016 08:32:50: # train command (train action)                                               #
+MPI Rank 3: 12/15/2016 08:32:50: #                                                                            #
+MPI Rank 3: 12/15/2016 08:32:50: ##############################################################################
+MPI Rank 3: 
+MPI Rank 3: WARNING: option syncFrequencyInFrames in ModelAveragingSGD is going to be deprecated. Please use blockSizePerWorker instead
+MPI Rank 3: 12/15/2016 08:32:50: 
+MPI Rank 3: Creating virgin network.
+MPI Rank 3: NDLBuilder Using CPU
+MPI Rank 3: 12/15/2016 08:32:51: 
+MPI Rank 3: Model has 21 nodes. Using CPU.
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:32:51: Training criterion:   ce = CrossEntropyWithSoftmax
+MPI Rank 3: 
+MPI Rank 3: 
+MPI Rank 3: Allocating matrices for forward and/or backward propagation.
+MPI Rank 3: 
+MPI Rank 3: Memory Sharing: Out of 36 matrices, 16 are shared as 7, and 20 are not shared.
+MPI Rank 3: 
+MPI Rank 3: 	{ SIM_Scale : [51 x 1 x *] (gradient)
+MPI Rank 3: 	  WD0_D_Tanh : [288 x *] (gradient)
+MPI Rank 3: 	  WD1_D_Tanh : [64 x *] (gradient) }
+MPI Rank 3: 	{ SIM_Scale : [51 x 1 x *]
+MPI Rank 3: 	  WQ0_Q_Tanh : [288 x *] (gradient)
+MPI Rank 3: 	  WQ1_Q_Tanh : [64 x *] (gradient) }
+MPI Rank 3: 	{ WQ0_Q : [288 x *] (gradient)
+MPI Rank 3: 	  WQ1_Q : [64 x *] }
+MPI Rank 3: 	{ WD0_D : [288 x *]
+MPI Rank 3: 	  WQ1_Q : [64 x *] (gradient) }
+MPI Rank 3: 	{ WQ1 : [64 x 288] (gradient)
+MPI Rank 3: 	  WQ1_Q_Tanh : [64 x *] }
+MPI Rank 3: 	{ WD0_D : [288 x *] (gradient)
+MPI Rank 3: 	  WD1_D : [64 x *] }
+MPI Rank 3: 	{ WD1 : [64 x 288] (gradient)
+MPI Rank 3: 	  WD1_D_Tanh : [64 x *] }
+MPI Rank 3: 
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:32:51: Training 28429056 parameters in 4 out of 4 parameter tensors and 15 nodes with gradient:
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:32:51: 	Node 'WD0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 3: 12/15/2016 08:32:51: 	Node 'WD1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 3: 12/15/2016 08:32:51: 	Node 'WQ0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 3: 12/15/2016 08:32:51: 	Node 'WQ1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 3: 
+MPI Rank 3: Parallel training (4 workers) using ModelAveraging
+MPI Rank 3: 12/15/2016 08:32:51: No PreCompute nodes found, or all already computed. Skipping pre-computation step.
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:32:53: Starting Epoch 1: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:32:53: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 3: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 0.17 seconds , average latency = 0.17 seconds
+MPI Rank 3: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 0.36 seconds , average latency = 0.18 seconds
+MPI Rank 3: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 0.55 seconds , average latency = 0.18 seconds
+MPI Rank 3: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.15-seconds latency this time; accumulated time on sync point = 0.70 seconds , average latency = 0.17 seconds
+MPI Rank 3: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.20-seconds latency this time; accumulated time on sync point = 0.89 seconds , average latency = 0.18 seconds
+MPI Rank 3: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.07 seconds , average latency = 0.18 seconds
+MPI Rank 3: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.18 seconds , average latency = 0.17 seconds
+MPI Rank 3: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 1.34 seconds , average latency = 0.17 seconds
+MPI Rank 3: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.04-seconds latency this time; accumulated time on sync point = 1.38 seconds , average latency = 0.15 seconds
+MPI Rank 3: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.48 seconds , average latency = 0.15 seconds
+MPI Rank 3: 12/15/2016 08:33:04:  Epoch[ 1 of 3]-Minibatch[   1-  10, 40.00%]: ce = 4.42918053 * 10240; time = 10.9443s; samplesPerSecond = 935.7
+MPI Rank 3: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 1.64 seconds , average latency = 0.15 seconds
+MPI Rank 3: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 1.75 seconds , average latency = 0.15 seconds
+MPI Rank 3: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 1.86 seconds , average latency = 0.14 seconds
+MPI Rank 3: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 2.04 seconds , average latency = 0.15 seconds
+MPI Rank 3: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 2.14 seconds , average latency = 0.14 seconds
+MPI Rank 3: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 2.31 seconds , average latency = 0.14 seconds
+MPI Rank 3: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 2.42 seconds , average latency = 0.14 seconds
+MPI Rank 3: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.14-seconds latency this time; accumulated time on sync point = 2.55 seconds , average latency = 0.14 seconds
+MPI Rank 3: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 2.72 seconds , average latency = 0.14 seconds
+MPI Rank 3: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 2.89 seconds , average latency = 0.14 seconds
+MPI Rank 3: 12/15/2016 08:33:14:  Epoch[ 1 of 3]-Minibatch[  11-  20, 80.00%]: ce = 3.41535912 * 10240; time = 10.8948s; samplesPerSecond = 939.9
+MPI Rank 3: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 2.99 seconds , average latency = 0.14 seconds
+MPI Rank 3: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 3.18 seconds , average latency = 0.14 seconds
+MPI Rank 3: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 3.18 seconds , average latency = 0.14 seconds
+MPI Rank 3: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 3.18 seconds , average latency = 0.13 seconds
+MPI Rank 3: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 3.37 seconds , average latency = 0.13 seconds
+MPI Rank 3: 12/15/2016 08:33:20: Finished Epoch[ 1 of 3]: [Training] ce = 3.67212647 * 102399; totalSamplesSeen = 102399; learningRatePerSample = 9.9999997e-005; epochTime=27.5565s
+MPI Rank 3: 12/15/2016 08:33:23: Final Results: Minibatch[1-26]: ce = 2.50345778 * 102399; perplexity = 12.22469126
+MPI Rank 3: 12/15/2016 08:33:23: Finished Epoch[ 1 of 3]: [Validate] ce = 2.50345778 * 102399
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:33:26: Starting Epoch 2: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:33:26: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 3: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.00 seconds , average latency = 0.00 seconds
+MPI Rank 3: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 0.17 seconds , average latency = 0.08 seconds
+MPI Rank 3: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.17 seconds , average latency = 0.06 seconds
+MPI Rank 3: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.17 seconds , average latency = 0.04 seconds
+MPI Rank 3: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 0.36 seconds , average latency = 0.07 seconds
+MPI Rank 3: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.54 seconds , average latency = 0.09 seconds
+MPI Rank 3: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.54 seconds , average latency = 0.08 seconds
+MPI Rank 3: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 0.65 seconds , average latency = 0.08 seconds
+MPI Rank 3: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 0.82 seconds , average latency = 0.09 seconds
+MPI Rank 3: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.82 seconds , average latency = 0.08 seconds
+MPI Rank 3: 12/15/2016 08:33:37:  Epoch[ 2 of 3]-Minibatch[   1-  10, 40.00%]: ce = 2.30913658 * 10240; time = 10.6888s; samplesPerSecond = 958.0
+MPI Rank 3: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.82 seconds , average latency = 0.07 seconds
+MPI Rank 3: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 0.99 seconds , average latency = 0.08 seconds
+MPI Rank 3: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.99 seconds , average latency = 0.08 seconds
+MPI Rank 3: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 1.11 seconds , average latency = 0.08 seconds
+MPI Rank 3: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.11 seconds , average latency = 0.07 seconds
+MPI Rank 3: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 1.22 seconds , average latency = 0.08 seconds
+MPI Rank 3: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.22 seconds , average latency = 0.07 seconds
+MPI Rank 3: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.22 seconds , average latency = 0.07 seconds
+MPI Rank 3: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.41 seconds , average latency = 0.07 seconds
+MPI Rank 3: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.50 seconds , average latency = 0.08 seconds
+MPI Rank 3: 12/15/2016 08:33:47:  Epoch[ 2 of 3]-Minibatch[  11-  20, 80.00%]: ce = 2.11783028 * 10240; time = 10.4305s; samplesPerSecond = 981.7
+MPI Rank 3: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.50 seconds , average latency = 0.07 seconds
+MPI Rank 3: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.50 seconds , average latency = 0.07 seconds
+MPI Rank 3: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.50 seconds , average latency = 0.07 seconds
+MPI Rank 3: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 1.61 seconds , average latency = 0.07 seconds
+MPI Rank 3: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.61 seconds , average latency = 0.06 seconds
+MPI Rank 3: 12/15/2016 08:33:52: Finished Epoch[ 2 of 3]: [Training] ce = 2.16978891 * 102399; totalSamplesSeen = 204798; learningRatePerSample = 9.9999997e-005; epochTime=26.1247s
+MPI Rank 3: 12/15/2016 08:33:55: Final Results: Minibatch[1-26]: ce = 1.96700289 * 102399; perplexity = 7.14921735
+MPI Rank 3: 12/15/2016 08:33:55: Finished Epoch[ 2 of 3]: [Validate] ce = 1.96700289 * 102399
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:33:57: Starting Epoch 3: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:33:57: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 3: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.04-seconds latency this time; accumulated time on sync point = 0.04 seconds , average latency = 0.04 seconds
+MPI Rank 3: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 0.15 seconds , average latency = 0.07 seconds
+MPI Rank 3: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.15 seconds , average latency = 0.05 seconds
+MPI Rank 3: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.15 seconds , average latency = 0.04 seconds
+MPI Rank 3: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.08-seconds latency this time; accumulated time on sync point = 0.23 seconds , average latency = 0.05 seconds
+MPI Rank 3: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.23 seconds , average latency = 0.04 seconds
+MPI Rank 3: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.01-seconds latency this time; accumulated time on sync point = 0.24 seconds , average latency = 0.03 seconds
+MPI Rank 3: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.24 seconds , average latency = 0.03 seconds
+MPI Rank 3: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.24 seconds , average latency = 0.03 seconds
+MPI Rank 3: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.24 seconds , average latency = 0.02 seconds
+MPI Rank 3: 12/15/2016 08:34:07:  Epoch[ 3 of 3]-Minibatch[   1-  10, 40.00%]: ce = 1.91029358 * 10240; time = 10.0480s; samplesPerSecond = 1019.1
+MPI Rank 3: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.24 seconds , average latency = 0.02 seconds
+MPI Rank 3: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.43 seconds , average latency = 0.04 seconds
+MPI Rank 3: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.43 seconds , average latency = 0.03 seconds
+MPI Rank 3: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.07-seconds latency this time; accumulated time on sync point = 0.49 seconds , average latency = 0.04 seconds
+MPI Rank 3: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 0.68 seconds , average latency = 0.05 seconds
+MPI Rank 3: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 0.80 seconds , average latency = 0.05 seconds
+MPI Rank 3: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.80 seconds , average latency = 0.05 seconds
+MPI Rank 3: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.07-seconds latency this time; accumulated time on sync point = 0.86 seconds , average latency = 0.05 seconds
+MPI Rank 3: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.08-seconds latency this time; accumulated time on sync point = 0.94 seconds , average latency = 0.05 seconds
+MPI Rank 3: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.06-seconds latency this time; accumulated time on sync point = 1.00 seconds , average latency = 0.05 seconds
+MPI Rank 3: 12/15/2016 08:34:18:  Epoch[ 3 of 3]-Minibatch[  11-  20, 80.00%]: ce = 1.88307991 * 10240; time = 10.3262s; samplesPerSecond = 991.7
+MPI Rank 3: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 1.16 seconds , average latency = 0.06 seconds
+MPI Rank 3: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.26 seconds , average latency = 0.06 seconds
+MPI Rank 3: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.26 seconds , average latency = 0.05 seconds
+MPI Rank 3: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.26 seconds , average latency = 0.05 seconds
+MPI Rank 3: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 1.37 seconds , average latency = 0.05 seconds
+MPI Rank 3: 12/15/2016 08:34:23: Finished Epoch[ 3 of 3]: [Training] ce = 1.88560946 * 102399; totalSamplesSeen = 307197; learningRatePerSample = 9.9999997e-005; epochTime=25.7053s
+MPI Rank 3: 12/15/2016 08:34:26: Final Results: Minibatch[1-26]: ce = 1.80966212 * 102399; perplexity = 6.10838318
+MPI Rank 3: 12/15/2016 08:34:26: Finished Epoch[ 3 of 3]: [Validate] ce = 1.80966212 * 102399
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:34:28: Action "train" complete.
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:34:28: __COMPLETED__
+=== Deleting last epoch data
+==== Re-running from checkpoint
+=== Running C:\Program Files\Microsoft MPI\Bin\/mpiexec.exe -n 4 C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu DeviceId=-1 timestamping=true numCPUThreads=1 stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:34:31
+
+C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+Changed current directory to C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData
+requestnodes [MPIWrapper]: using 4 out of 4 MPI nodes on a single host (4 requested); we (0) are in (participating)
+CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:34:31
+
+C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+Changed current directory to C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData
+requestnodes [MPIWrapper]: using 4 out of 4 MPI nodes on a single host (4 requested); we (1) are in (participating)
+CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:34:31
+
+C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+Changed current directory to C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData
+requestnodes [MPIWrapper]: using 4 out of 4 MPI nodes on a single host (4 requested); we (2) are in (participating)
+CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:34:31
+
+C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+Changed current directory to C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData
+requestnodes [MPIWrapper]: using 4 out of 4 MPI nodes on a single host (4 requested); we (3) are in (participating)
+MPI Rank 0: 12/15/2016 08:34:31: Redirecting stderr to file C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr_train.logrank0
+MPI Rank 0: CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:34:31
+MPI Rank 0: 
+MPI Rank 0: C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+MPI Rank 0: 12/15/2016 08:34:31: Using 1 CPU threads.
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:34:31: ##############################################################################
+MPI Rank 0: 12/15/2016 08:34:31: #                                                                            #
+MPI Rank 0: 12/15/2016 08:34:31: # train command (train action)                                               #
+MPI Rank 0: 12/15/2016 08:34:31: #                                                                            #
+MPI Rank 0: 12/15/2016 08:34:31: ##############################################################################
+MPI Rank 0: 
+MPI Rank 0: WARNING: option syncFrequencyInFrames in ModelAveragingSGD is going to be deprecated. Please use blockSizePerWorker instead
+MPI Rank 0: 12/15/2016 08:34:31: 
+MPI Rank 0: Starting from checkpoint. Loading network from 'C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/Models/dssm.net.2'.
+MPI Rank 0: NDLBuilder Using CPU
+MPI Rank 0: 12/15/2016 08:34:33: 
+MPI Rank 0: Model has 21 nodes. Using CPU.
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:34:33: Training criterion:   ce = CrossEntropyWithSoftmax
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:34:33: Training 28429056 parameters in 4 out of 4 parameter tensors and 15 nodes with gradient:
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:34:33: 	Node 'WD0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 0: 12/15/2016 08:34:33: 	Node 'WD1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 0: 12/15/2016 08:34:33: 	Node 'WQ0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 0: 12/15/2016 08:34:33: 	Node 'WQ1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 0: 
+MPI Rank 0: Parallel training (4 workers) using ModelAveraging
+MPI Rank 0: 12/15/2016 08:34:33: No PreCompute nodes found, or all already computed. Skipping pre-computation step.
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:34:37: Starting Epoch 3: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:34:37: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 0: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.00 seconds , average latency = 0.00 seconds
+MPI Rank 0: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.00 seconds , average latency = 0.00 seconds
+MPI Rank 0: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.10 seconds , average latency = 0.03 seconds
+MPI Rank 0: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.10 seconds , average latency = 0.02 seconds
+MPI Rank 0: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 0.25 seconds , average latency = 0.05 seconds
+MPI Rank 0: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.12-seconds latency this time; accumulated time on sync point = 0.38 seconds , average latency = 0.06 seconds
+MPI Rank 0: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.38 seconds , average latency = 0.05 seconds
+MPI Rank 0: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.38 seconds , average latency = 0.05 seconds
+MPI Rank 0: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.56 seconds , average latency = 0.06 seconds
+MPI Rank 0: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.56 seconds , average latency = 0.06 seconds
+MPI Rank 0: 12/15/2016 08:34:47:  Epoch[ 3 of 3]-Minibatch[   1-  10, 40.00%]: ce = 1.88089752 * 10240; time = 10.5664s; samplesPerSecond = 969.1
+MPI Rank 0: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 0.73 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.04-seconds latency this time; accumulated time on sync point = 0.78 seconds , average latency = 0.06 seconds
+MPI Rank 0: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.88 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.88 seconds , average latency = 0.06 seconds
+MPI Rank 0: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 1.06 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.16 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 1.35 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.06-seconds latency this time; accumulated time on sync point = 1.41 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.41 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 1.52 seconds , average latency = 0.08 seconds
+MPI Rank 0: 12/15/2016 08:34:58:  Epoch[ 3 of 3]-Minibatch[  11-  20, 80.00%]: ce = 1.80589867 * 10240; time = 10.3423s; samplesPerSecond = 990.1
+MPI Rank 0: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.52 seconds , average latency = 0.07 seconds
+MPI Rank 0: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 1.69 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 1.79 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.07-seconds latency this time; accumulated time on sync point = 1.86 seconds , average latency = 0.08 seconds
+MPI Rank 0: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.86 seconds , average latency = 0.07 seconds
+MPI Rank 0: 12/15/2016 08:35:03: Finished Epoch[ 3 of 3]: [Training] ce = 1.89067841 * 102399; totalSamplesSeen = 307197; learningRatePerSample = 9.9999997e-005; epochTime=26.183s
+MPI Rank 0: 12/15/2016 08:35:05: Final Results: Minibatch[1-26]: ce = 1.82065220 * 102399; perplexity = 6.17588508
+MPI Rank 0: 12/15/2016 08:35:05: Finished Epoch[ 3 of 3]: [Validate] ce = 1.82065220 * 102399
+MPI Rank 0: 12/15/2016 08:35:07: SGD: Saving checkpoint model 'C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/Models/dssm.net'
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:35:08: Action "train" complete.
+MPI Rank 0: 
+MPI Rank 0: 12/15/2016 08:35:08: __COMPLETED__
+MPI Rank 1: 12/15/2016 08:34:31: Redirecting stderr to file C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr_train.logrank1
+MPI Rank 1: CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:34:31
+MPI Rank 1: 
+MPI Rank 1: C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+MPI Rank 1: 12/15/2016 08:34:31: Using 1 CPU threads.
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:34:31: ##############################################################################
+MPI Rank 1: 12/15/2016 08:34:31: #                                                                            #
+MPI Rank 1: 12/15/2016 08:34:31: # train command (train action)                                               #
+MPI Rank 1: 12/15/2016 08:34:31: #                                                                            #
+MPI Rank 1: 12/15/2016 08:34:31: ##############################################################################
+MPI Rank 1: 
+MPI Rank 1: WARNING: option syncFrequencyInFrames in ModelAveragingSGD is going to be deprecated. Please use blockSizePerWorker instead
+MPI Rank 1: 12/15/2016 08:34:31: 
+MPI Rank 1: Starting from checkpoint. Loading network from 'C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/Models/dssm.net.2'.
+MPI Rank 1: NDLBuilder Using CPU
+MPI Rank 1: 12/15/2016 08:34:33: 
+MPI Rank 1: Model has 21 nodes. Using CPU.
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:34:33: Training criterion:   ce = CrossEntropyWithSoftmax
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:34:34: Training 28429056 parameters in 4 out of 4 parameter tensors and 15 nodes with gradient:
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:34:34: 	Node 'WD0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 1: 12/15/2016 08:34:34: 	Node 'WD1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 1: 12/15/2016 08:34:34: 	Node 'WQ0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 1: 12/15/2016 08:34:34: 	Node 'WQ1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 1: 
+MPI Rank 1: Parallel training (4 workers) using ModelAveraging
+MPI Rank 1: 12/15/2016 08:34:34: No PreCompute nodes found, or all already computed. Skipping pre-computation step.
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:34:37: Starting Epoch 3: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:34:37: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 1: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.00 seconds , average latency = 0.00 seconds
+MPI Rank 1: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.10 seconds , average latency = 0.05 seconds
+MPI Rank 1: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.15-seconds latency this time; accumulated time on sync point = 0.25 seconds , average latency = 0.08 seconds
+MPI Rank 1: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.06-seconds latency this time; accumulated time on sync point = 0.31 seconds , average latency = 0.08 seconds
+MPI Rank 1: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.06-seconds latency this time; accumulated time on sync point = 0.37 seconds , average latency = 0.07 seconds
+MPI Rank 1: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 0.56 seconds , average latency = 0.09 seconds
+MPI Rank 1: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 0.66 seconds , average latency = 0.09 seconds
+MPI Rank 1: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.76 seconds , average latency = 0.10 seconds
+MPI Rank 1: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.76 seconds , average latency = 0.08 seconds
+MPI Rank 1: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.94 seconds , average latency = 0.09 seconds
+MPI Rank 1: 12/15/2016 08:34:47:  Epoch[ 3 of 3]-Minibatch[   1-  10, 40.00%]: ce = 1.93367901 * 10240; time = 10.5305s; samplesPerSecond = 972.4
+MPI Rank 1: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.06-seconds latency this time; accumulated time on sync point = 1.00 seconds , average latency = 0.09 seconds
+MPI Rank 1: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.05-seconds latency this time; accumulated time on sync point = 1.06 seconds , average latency = 0.09 seconds
+MPI Rank 1: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.06 seconds , average latency = 0.08 seconds
+MPI Rank 1: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.06 seconds , average latency = 0.08 seconds
+MPI Rank 1: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.06 seconds , average latency = 0.07 seconds
+MPI Rank 1: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.06 seconds , average latency = 0.07 seconds
+MPI Rank 1: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.06 seconds , average latency = 0.06 seconds
+MPI Rank 1: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.24 seconds , average latency = 0.07 seconds
+MPI Rank 1: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.24 seconds , average latency = 0.07 seconds
+MPI Rank 1: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.24 seconds , average latency = 0.06 seconds
+MPI Rank 1: 12/15/2016 08:34:57:  Epoch[ 3 of 3]-Minibatch[  11-  20, 80.00%]: ce = 1.90257206 * 10240; time = 10.2678s; samplesPerSecond = 997.3
+MPI Rank 1: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.24 seconds , average latency = 0.06 seconds
+MPI Rank 1: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 1.40 seconds , average latency = 0.06 seconds
+MPI Rank 1: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 1.56 seconds , average latency = 0.07 seconds
+MPI Rank 1: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.56 seconds , average latency = 0.06 seconds
+MPI Rank 1: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.56 seconds , average latency = 0.06 seconds
+MPI Rank 1: 12/15/2016 08:35:03: Finished Epoch[ 3 of 3]: [Training] ce = 1.89067841 * 102399; totalSamplesSeen = 307197; learningRatePerSample = 9.9999997e-005; epochTime=26.1835s
+MPI Rank 1: 12/15/2016 08:35:05: Final Results: Minibatch[1-26]: ce = 1.82065220 * 102399; perplexity = 6.17588508
+MPI Rank 1: 12/15/2016 08:35:05: Finished Epoch[ 3 of 3]: [Validate] ce = 1.82065220 * 102399
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:35:08: Action "train" complete.
+MPI Rank 1: 
+MPI Rank 1: 12/15/2016 08:35:08: __COMPLETED__
+MPI Rank 2: 12/15/2016 08:34:32: Redirecting stderr to file C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr_train.logrank2
+MPI Rank 2: CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:34:31
+MPI Rank 2: 
+MPI Rank 2: C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+MPI Rank 2: 12/15/2016 08:34:32: Using 1 CPU threads.
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:34:32: ##############################################################################
+MPI Rank 2: 12/15/2016 08:34:32: #                                                                            #
+MPI Rank 2: 12/15/2016 08:34:32: # train command (train action)                                               #
+MPI Rank 2: 12/15/2016 08:34:32: #                                                                            #
+MPI Rank 2: 12/15/2016 08:34:32: ##############################################################################
+MPI Rank 2: 
+MPI Rank 2: WARNING: option syncFrequencyInFrames in ModelAveragingSGD is going to be deprecated. Please use blockSizePerWorker instead
+MPI Rank 2: 12/15/2016 08:34:32: 
+MPI Rank 2: Starting from checkpoint. Loading network from 'C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/Models/dssm.net.2'.
+MPI Rank 2: NDLBuilder Using CPU
+MPI Rank 2: 12/15/2016 08:34:34: 
+MPI Rank 2: Model has 21 nodes. Using CPU.
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:34:34: Training criterion:   ce = CrossEntropyWithSoftmax
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:34:34: Training 28429056 parameters in 4 out of 4 parameter tensors and 15 nodes with gradient:
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:34:34: 	Node 'WD0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 2: 12/15/2016 08:34:34: 	Node 'WD1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 2: 12/15/2016 08:34:34: 	Node 'WQ0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 2: 12/15/2016 08:34:34: 	Node 'WQ1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 2: 
+MPI Rank 2: Parallel training (4 workers) using ModelAveraging
+MPI Rank 2: 12/15/2016 08:34:34: No PreCompute nodes found, or all already computed. Skipping pre-computation step.
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:34:37: Starting Epoch 3: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:34:37: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 2: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 0.11 seconds , average latency = 0.11 seconds
+MPI Rank 2: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 0.22 seconds , average latency = 0.11 seconds
+MPI Rank 2: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.22 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.22 seconds , average latency = 0.05 seconds
+MPI Rank 2: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.06-seconds latency this time; accumulated time on sync point = 0.27 seconds , average latency = 0.05 seconds
+MPI Rank 2: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.27 seconds , average latency = 0.05 seconds
+MPI Rank 2: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.27 seconds , average latency = 0.04 seconds
+MPI Rank 2: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.12-seconds latency this time; accumulated time on sync point = 0.39 seconds , average latency = 0.05 seconds
+MPI Rank 2: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.57 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.74 seconds , average latency = 0.07 seconds
+MPI Rank 2: 12/15/2016 08:34:47:  Epoch[ 3 of 3]-Minibatch[   1-  10, 40.00%]: ce = 1.95605373 * 10240; time = 10.6453s; samplesPerSecond = 961.9
+MPI Rank 2: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.74 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.74 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 0.91 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.92 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.12-seconds latency this time; accumulated time on sync point = 1.04 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.04 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 1.23 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.23 seconds , average latency = 0.07 seconds
+MPI Rank 2: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.23 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.23 seconds , average latency = 0.06 seconds
+MPI Rank 2: 12/15/2016 08:34:57:  Epoch[ 3 of 3]-Minibatch[  11-  20, 80.00%]: ce = 1.90415668 * 10240; time = 10.1969s; samplesPerSecond = 1004.2
+MPI Rank 2: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.08-seconds latency this time; accumulated time on sync point = 1.31 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.31 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.31 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.07-seconds latency this time; accumulated time on sync point = 1.37 seconds , average latency = 0.06 seconds
+MPI Rank 2: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 1.37 seconds , average latency = 0.05 seconds
+MPI Rank 2: 12/15/2016 08:35:03: Finished Epoch[ 3 of 3]: [Training] ce = 1.89067841 * 102399; totalSamplesSeen = 307197; learningRatePerSample = 9.9999997e-005; epochTime=26.1827s
+MPI Rank 2: 12/15/2016 08:35:05: Final Results: Minibatch[1-26]: ce = 1.82065220 * 102399; perplexity = 6.17588508
+MPI Rank 2: 12/15/2016 08:35:05: Finished Epoch[ 3 of 3]: [Validate] ce = 1.82065220 * 102399
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:35:08: Action "train" complete.
+MPI Rank 2: 
+MPI Rank 2: 12/15/2016 08:35:08: __COMPLETED__
+MPI Rank 3: 12/15/2016 08:34:32: Redirecting stderr to file C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr_train.logrank3
+MPI Rank 3: CNTK 2.0.beta6.0+ (HEAD 5f1fab, Dec 15 2016 06:29:34) on cntk-muc03 at 2016/12/15 08:34:31
+MPI Rank 3: 
+MPI Rank 3: C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM/dssm.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Text\SparseDSSM  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu  DeviceId=-1  timestamping=true  numCPUThreads=1  stderr=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/stderr
+MPI Rank 3: 12/15/2016 08:34:32: Using 1 CPU threads.
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:34:32: ##############################################################################
+MPI Rank 3: 12/15/2016 08:34:32: #                                                                            #
+MPI Rank 3: 12/15/2016 08:34:32: # train command (train action)                                               #
+MPI Rank 3: 12/15/2016 08:34:32: #                                                                            #
+MPI Rank 3: 12/15/2016 08:34:32: ##############################################################################
+MPI Rank 3: 
+MPI Rank 3: WARNING: option syncFrequencyInFrames in ModelAveragingSGD is going to be deprecated. Please use blockSizePerWorker instead
+MPI Rank 3: 12/15/2016 08:34:32: 
+MPI Rank 3: Starting from checkpoint. Loading network from 'C:\Users\svcphil\AppData\Local\Temp\cntk-test-20161215082748.614918\Text_SparseDSSM@release_cpu/Models/dssm.net.2'.
+MPI Rank 3: NDLBuilder Using CPU
+MPI Rank 3: 12/15/2016 08:34:34: 
+MPI Rank 3: Model has 21 nodes. Using CPU.
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:34:34: Training criterion:   ce = CrossEntropyWithSoftmax
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:34:35: Training 28429056 parameters in 4 out of 4 parameter tensors and 15 nodes with gradient:
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:34:35: 	Node 'WD0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 3: 12/15/2016 08:34:35: 	Node 'WD1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 3: 12/15/2016 08:34:35: 	Node 'WQ0' (LearnableParameter operation) : [288 x 49292]
+MPI Rank 3: 12/15/2016 08:34:35: 	Node 'WQ1' (LearnableParameter operation) : [64 x 288]
+MPI Rank 3: 
+MPI Rank 3: Parallel training (4 workers) using ModelAveraging
+MPI Rank 3: 12/15/2016 08:34:35: No PreCompute nodes found, or all already computed. Skipping pre-computation step.
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:34:37: Starting Epoch 3: learning rate per sample = 0.000100  effective momentum = 0.900000  momentum as time constant = 38876.0 samples
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:34:37: Starting minibatch loop, distributed reading is ENABLED.
+MPI Rank 3: 		(model aggregation stats): 1-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 0.11 seconds , average latency = 0.11 seconds
+MPI Rank 3: 		(model aggregation stats): 2-th sync point was hit, introducing a 0.11-seconds latency this time; accumulated time on sync point = 0.23 seconds , average latency = 0.11 seconds
+MPI Rank 3: 		(model aggregation stats): 3-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 0.39 seconds , average latency = 0.13 seconds
+MPI Rank 3: 		(model aggregation stats): 4-th sync point was hit, introducing a 0.06-seconds latency this time; accumulated time on sync point = 0.44 seconds , average latency = 0.11 seconds
+MPI Rank 3: 		(model aggregation stats): 5-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 0.44 seconds , average latency = 0.09 seconds
+MPI Rank 3: 		(model aggregation stats): 6-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 0.63 seconds , average latency = 0.11 seconds
+MPI Rank 3: 		(model aggregation stats): 7-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.81 seconds , average latency = 0.12 seconds
+MPI Rank 3: 		(model aggregation stats): 8-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 0.99 seconds , average latency = 0.12 seconds
+MPI Rank 3: 		(model aggregation stats): 9-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.17 seconds , average latency = 0.13 seconds
+MPI Rank 3: 		(model aggregation stats): 10-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.35 seconds , average latency = 0.13 seconds
+MPI Rank 3: 12/15/2016 08:34:47:  Epoch[ 3 of 3]-Minibatch[   1-  10, 40.00%]: ce = 1.91980667 * 10240; time = 10.5862s; samplesPerSecond = 967.3
+MPI Rank 3: 		(model aggregation stats): 11-th sync point was hit, introducing a 0.18-seconds latency this time; accumulated time on sync point = 1.52 seconds , average latency = 0.14 seconds
+MPI Rank 3: 		(model aggregation stats): 12-th sync point was hit, introducing a 0.06-seconds latency this time; accumulated time on sync point = 1.58 seconds , average latency = 0.13 seconds
+MPI Rank 3: 		(model aggregation stats): 13-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 1.75 seconds , average latency = 0.13 seconds
+MPI Rank 3: 		(model aggregation stats): 14-th sync point was hit, introducing a 0.01-seconds latency this time; accumulated time on sync point = 1.77 seconds , average latency = 0.13 seconds
+MPI Rank 3: 		(model aggregation stats): 15-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 1.94 seconds , average latency = 0.13 seconds
+MPI Rank 3: 		(model aggregation stats): 16-th sync point was hit, introducing a 0.09-seconds latency this time; accumulated time on sync point = 2.03 seconds , average latency = 0.13 seconds
+MPI Rank 3: 		(model aggregation stats): 17-th sync point was hit, introducing a 0.07-seconds latency this time; accumulated time on sync point = 2.10 seconds , average latency = 0.12 seconds
+MPI Rank 3: 		(model aggregation stats): 18-th sync point was hit, introducing a 0.19-seconds latency this time; accumulated time on sync point = 2.29 seconds , average latency = 0.13 seconds
+MPI Rank 3: 		(model aggregation stats): 19-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 2.29 seconds , average latency = 0.12 seconds
+MPI Rank 3: 		(model aggregation stats): 20-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 2.39 seconds , average latency = 0.12 seconds
+MPI Rank 3: 12/15/2016 08:34:57:  Epoch[ 3 of 3]-Minibatch[  11-  20, 80.00%]: ce = 1.91413536 * 10240; time = 10.2678s; samplesPerSecond = 997.3
+MPI Rank 3: 		(model aggregation stats): 21-th sync point was hit, introducing a 0.00-seconds latency this time; accumulated time on sync point = 2.39 seconds , average latency = 0.11 seconds
+MPI Rank 3: 		(model aggregation stats): 22-th sync point was hit, introducing a 0.17-seconds latency this time; accumulated time on sync point = 2.56 seconds , average latency = 0.12 seconds
+MPI Rank 3: 		(model aggregation stats): 23-th sync point was hit, introducing a 0.16-seconds latency this time; accumulated time on sync point = 2.72 seconds , average latency = 0.12 seconds
+MPI Rank 3: 		(model aggregation stats): 24-th sync point was hit, introducing a 0.10-seconds latency this time; accumulated time on sync point = 2.82 seconds , average latency = 0.12 seconds
+MPI Rank 3: 		(model aggregation stats): 25-th sync point was hit, introducing a 0.09-seconds latency this time; accumulated time on sync point = 2.91 seconds , average latency = 0.12 seconds
+MPI Rank 3: 12/15/2016 08:35:03: Finished Epoch[ 3 of 3]: [Training] ce = 1.89067841 * 102399; totalSamplesSeen = 307197; learningRatePerSample = 9.9999997e-005; epochTime=26.1835s
+MPI Rank 3: 12/15/2016 08:35:05: Final Results: Minibatch[1-26]: ce = 1.82065220 * 102399; perplexity = 6.17588508
+MPI Rank 3: 12/15/2016 08:35:05: Finished Epoch[ 3 of 3]: [Validate] ce = 1.82065220 * 102399
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:35:08: Action "train" complete.
+MPI Rank 3: 
+MPI Rank 3: 12/15/2016 08:35:08: __COMPLETED__
